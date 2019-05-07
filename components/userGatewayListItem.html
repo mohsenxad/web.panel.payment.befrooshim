@@ -1,0 +1,40 @@
+<a ng-href='#!/service/order/{{$ctrl.gateway._id}}' title="" class="row no-gutters align-items-center service-list-item">
+    <div class="col-12">
+        <div class="item-package-name">
+            {{$ctrl.usergateway.gateway.persianTitle}}
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="item-detail text-right">
+          <div class="detail-text">
+              <span class="icon icon-pair-of-bills"></span>
+              <div>{{$ctrl.usergateway.gateway.englishTitle}}</div>
+          </div>
+            <div class="detail-text"><span class="icon icon-sim-card"></span>
+              {{$ctrl.usergateway.gateway.abbriviation}}
+            </div>
+            <div class="detail-text"><span class="icon icon-calendar-page-empty"></span>
+              {{$ctrl.usergateway.gateway.website}}
+            </div>
+        </div>
+    </div>
+    <div class="col-3">
+      <div class="item-detail text-right">
+        <div class="detail-text">
+            <span class="icon icon-pair-of-bills"></span>
+            <div>{{$ctrl.usergateway.website}}</div>
+        </div>
+          <div class="detail-text"><span class="icon icon-sim-card"></span>
+            {{$ctrl.usergateway.lastOrderId}}
+          </div>
+          <div class="detail-text"><span class="icon icon-calendar-page-empty"></span>
+            {{$ctrl.usergateway.credentials}}
+          </div>
+      </div>
+    </div>
+    <div class="col-3 text-left">
+      <span class="item-price">
+        {{$ctrl.usergateway.gateway.credentialList|json}}
+      </span>
+    </div>
+</a>

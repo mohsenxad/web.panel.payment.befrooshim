@@ -1,0 +1,13 @@
+<div class="container-toast-message" ng-if='$ctrl.visible==true'>
+    <div class="toast-message white">
+        <div class="row no-gutters">
+            <div class="col-12">
+                <div class="icon icon-notification"></div>
+                <div class="toast-message-text">
+                    {{$ctrl.message}}
+                </div>
+                <div class="icon icon-close" ng-click='$ctrl.close()'></div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+{
+  "name": "Fecharge App",
+  "short_name": "FECHARGE",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "theme_color": "red",
+  "background_color":"green",
+  "icons": [
+    {
+      "src": "image/logo_512X512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }]
+}

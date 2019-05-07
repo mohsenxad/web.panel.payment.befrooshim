@@ -1,0 +1,29 @@
+<a ng-href='#!/service/order/{{$ctrl.gateway._id}}' title="" class="row no-gutters align-items-center service-list-item">
+    <div class="col-12">
+        <div class="item-package-name">
+          {{$ctrl.payment.description}}
+
+        </div>
+    </div>
+    <div class="col-9">
+        <div class="item-detail text-right">
+          <div class="detail-text">
+              <span class="icon icon-pair-of-bills"></span>
+              <div>
+                  {{$ctrl.payment.price}}
+              </div>
+          </div>
+          <div class="detail-text"><span class="icon icon-sim-card"></span>
+            {{$ctrl.payment.userMobileNumber}}
+          </div>
+          <div class="detail-text"><span class="icon icon-calendar-page-empty"></span>
+            {{$ctrl.payment.status}}
+          </div>
+          <div class="detail-text">
+            بانک :
+            {{$ctrl.payment.bank}}
+          </div>
+
+        </div>
+    </div>
+</a>

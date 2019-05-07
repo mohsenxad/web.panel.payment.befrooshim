@@ -1,0 +1,234 @@
+<loading visible='isViewLoading'></loading>
+<div class="container-transaction" id='divReceipt'>
+    <div class="container">
+        <div class="row transaction-wrapper no-gutters">
+
+            <div class="col-12 col-lg-4">
+                <div class="transaction-status success" ng-if='payment.status=="done"'>
+                    <div class="status-data">
+                        <img src="../image/success-pay.png" alt="" class="status-img">
+                        <h3 class="status-title ">
+                          پرداخت موفق
+                        </h3>
+                    </div>
+                </div>
+                <div class="transaction-status danger" ng-if='payment.status=="pending"'>
+                    <div class="status-data">
+                        <img src="../image/danger.png" alt="" class="status-img">
+                        <h3 class="status-title ">فعال سازی ناموفق</h3>
+                    </div>
+                </div>
+                <div class="transaction-status warning" ng-if='payment.status=="reverse"'>
+                    <div class="status-data">
+                        <img src="../image/revert-payment.png" alt="" class="status-img">
+                        <h3 class="status-title ">بازپرداخت شده</h3>
+                    </div>
+                </div>
+                <div class="transaction-status danger" ng-if='payment.status=="refund"'>
+                    <div class="status-data">
+                        <img src="../image/no-accept-pay.png" alt="" class="status-img">
+                        <h3 class="status-title ">پرداخت تایید نشده</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-5">
+                <div class="transaction-result-content" ng-if='payment.status=="done"'>
+                    <h6 class="result-content-subtitle success">
+                      پرداخت شما
+                    </h6>
+                    <h5 class="result-content-title success">با موفقیت انجام شد!</h5>
+                    <p class="result-content-text">
+                        مبلغ
+                        <span>
+                          {{payment.price}}
+                        </span>
+                    </p>
+                    <p class="result-content-text">
+                        برای
+                        <span>
+                          {{payment.description}}
+                        </span>
+                        با موفقیت انجام شد.
+                    </p>
+                    <div>
+                        <button class="btn btn-success col-12 col-md-7" ng-click='downloadReceipt()'>
+                            {{saveOrderButtonText}}
+                        </button>
+                    </div>
+                    <div>
+                        <button class="btn btn-primary col-12 col-md-7">معرفی به دوستان</button>
+                    </div>
+                    <div class="rate-application">
+                        <h6 class="title">امتیاز به برنامه:</h6>
+                        <button class="btn btn-outline-light col-5">
+                            GooglePlay
+                            <img src="../image/android.png" alt="">
+                        </button>
+                        <button class="btn btn-outline-light col-5">
+                            AppStore
+                            <img src="../image/apple.png" alt="">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="transaction-result-content" ng-if='order.shippingStatus!="shipped" && payment.status!="done" && payment.status!="reverse"'>
+                    <h6 class="result-content-subtitle danger">پرداخت شما</h6>
+                    <h5 class="result-content-title danger">توسط بانک تایید نشد!</h5>
+                    <p class="result-content-text">
+                        پرداخت شما مورد تایید بانک نبوده و
+                        <span>
+                          {{order.service.title}}
+                        </span>
+                        بر روی شماره ی
+                        <span>
+                          {{order.mobileNumber}}
+                        </span>
+                        فعال نشده است.
+                    </p>
+                    <p class="result-content-text">
+                        در صورتی که مبلغی از حساب شما کسر شده است  - حداکثر تا ۴۸ ساعت به حساب شما برگشت داده می‌شود.
+                    </p>
+                    <div>
+                      <a role='button' href="tel:*789*2419*4%23" class="btn btn-danger col-12 col-md-7">
+                                    خرید از طریق USSD
+                      </a>
+                    </div>
+                    <div>
+                        <button class="btn btn-success col-12 col-md-7" ng-click='downloadReceipt()'>
+                            {{saveOrderButtonText}}
+                        </button>
+                    </div>
+                </div>
+
+                <div class="transaction-result-content" ng-if='payment.status=="reverse"'>
+                    <h6 class="result-content-subtitle warning">پرداخت شما</h6>
+                    <h5 class="result-content-title warning">توسط بانک برگشت داده شد!</h5>
+                    <p class="result-content-text">
+                        در صورتی که مبلغی از حساب شما کسر شده است - حداکثر تا ۴۸ ساعت به حساب شما برگشت داده می‌شود.
+                    </p>
+                    <p class="result-content-text">
+                        این مشکل اغلب به دلیل مناسب نبودن نوع سیم کارت با نوع سرویس
+                        انتخابی در زمان خرید می‌باشد.
+                    </p>
+                    <div>
+                        <button class="btn btn-success col-12 col-md-7" ng-click='downloadReceipt()'>
+                            {{saveOrderButtonText}}
+                        </button>
+                    </div>
+                </div>
+
+                <div class="transaction-result-content" ng-if='payment.status=="done" && order.shippingStatus!="shopped"'>
+                    <h6 class="result-content-subtitle danger">درخواست شما</h6>
+                    <h5 class="result-content-title danger">با خطا مواجه شد</h5>
+                    <p class="result-content-text">
+                        متاسفانه در روند ارایه خدمات خطا رخ داده است.
+                    </p>
+                    <p class="result-content-text">
+                        جهت پرگشت وجه پرداختی با شماره ی پشتیبانی ما تماس بگیرید 02122480150
+                    </p>
+                    <div>
+                        <button class="btn btn-outline-light col-12 col-md-7">درخواست پشتیبانی</button>
+                    </div>
+                    <div>
+                        <button class="btn btn-success col-12 col-md-7" ng-click='downloadReceipt()' ng-disabled='isCreatingReceipt==true'>
+                            {{saveOrderButtonText}}
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-3">
+                <div class="transaction-info-wrapper">
+                    <div class="transaction-info-detail text-right" ng-if='order.appliedService'>
+                      <div class="detail-text">
+                          <span class="icon icon-sim-card"></span>
+                          <div>
+                              اپراتور:
+                              {{order.appliedService.operator.persianTitle}}
+                          </div>
+                      </div>
+                        <div class="detail-text">
+                            <span class="icon icon-sim-card"></span>
+                            <div>
+                                نوع سیم کارت:
+                                {{order.appliedService.simType.title}}
+                            </div>
+                        </div>
+                        <div class="detail-text">
+                            <span class="icon icon-calendar-page-empty"></span>
+                            مدت اعتبار:
+                            {{order.appliedService.duration.title}}
+                        </div>
+                        <div class="detail-text">
+                            <span class="icon icon-pair-of-bills"></span>
+                            <div>
+                                قیمت بسته:
+                                {{order.appliedService.price | currency}}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="transaction-info-detail text-right" ng-if='order.service && order.appliedService==undefined'>
+                      <div class="detail-text">
+                          <span class="icon icon-sim-card"></span>
+                          <div>
+                              اپراتور:
+                              {{order.service.operator.persianTitle}}
+                          </div>
+                      </div>
+                        <div class="detail-text">
+                            <span class="icon icon-sim-card"></span>
+                            <div>
+                                نوع سیم کارت:
+                                {{order.service.simType.title}}
+                            </div>
+                        </div>
+                        <div class="detail-text">
+                            <span class="icon icon-calendar-page-empty"></span>
+                            مدت اعتبار:
+                            {{order.service.duration.title}}
+                        </div>
+                        <div class="detail-text">
+                            <span class="icon icon-pair-of-bills"></span>
+                            <div>
+                                قیمت بسته:
+                                {{order.service.price | currency}}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="transaction-info-money-paid">
+                        <span class="money-paid-title">هزینه پرداخت شده:</span>
+                        <span class="money-paid-price">
+                          {{order.service.vatPrice | currency}}
+                        </span>
+                    </div>
+
+                    <div class="transaction-info-detail-paid">
+                        <h4 class="detail-paid-title">سفارش شما با جزییات زیر قابل پیگیری است:</h4>
+                        <ul class="detail-paid-list">
+                            <li><span>
+                              شماره سفارش:
+                              {{order.OrderId}}
+                            </span></li>
+                            <li><span>
+                              کد پیگیری:
+                              ارسال شده در پیامک بانک
+                            </span></li>
+                            <li><span>
+                              کد ارجاع:
+                              {{payment.reverseKey}}
+                            </span></li>
+                        </ul>
+                        <a role='button' class="btn btn-warning col-12" ng-href='#!/service/list'>
+                          بازگشت به لیست بسته‌ها
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

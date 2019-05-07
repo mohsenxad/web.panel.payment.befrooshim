@@ -1,0 +1,25 @@
+<a ng-href='#!/service/order/{{$ctrl.gateway._id}}' title="" class="row no-gutters align-items-center service-list-item">
+    <div class="col-12">
+        <div class="item-package-name">
+            {{$ctrl.gateway.persianTitle}}
+        </div>
+    </div>
+    <div class="col-9">
+        <div class="item-detail text-right">
+          <div class="detail-text">
+              <span class="icon icon-pair-of-bills"></span>
+              <div>{{$ctrl.gateway.englishTitle}}</div>
+          </div>
+            <div class="detail-text"><span class="icon icon-sim-card"></span>
+              {{$ctrl.gateway.abbriviation}}
+            </div>
+            <div class="detail-text"><span class="icon icon-calendar-page-empty"></span>
+              {{$ctrl.gateway.website}}
+            </div>
+
+        </div>
+    </div>
+    <div class="col-3 text-left"><span class="item-price">
+      {{$ctrl.gateway.credentialList|json}}
+    </span></div>
+</a>

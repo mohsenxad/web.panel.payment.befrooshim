@@ -1,0 +1,30 @@
+اضافه کردن درگاه
+<ul>
+  <li>
+    عنوان درگاه:
+    <input type='text' ng-model='$ctrl.userGateway.title' />
+  </li>
+  <li>
+    درگاه:
+    <select
+          id='cmdGateway'
+          ng-model="$ctrl.userGateway.gateway"
+          ng-options='gateway as gateway.persianTitle for gateway in $ctrl.gatewayList track by gateway._id'
+          ng-change = '$ctrl.createCredentialsFiledList()'
+          >
+        </select>
+  </li>
+  <li>
+    وبسایت:
+    <input type='text' ng-model='$ctrl.userGateway.website' />
+  </li>
+  <li>
+    آخرین شماره سفارش:
+    <input type='text' ng-model='$ctrl.userGateway.lastOrderId' />
+  </li>
+  <li ng-repeat='field in $ctrl.credentialsFiledList'>
+    {{field}}
+    <input type='text' ng-model='$ctrl.userGateway.credentials[field]'/>
+  </li>
+</ul>
+<button ng-click='$ctrl.save()'>ذخیره</button>

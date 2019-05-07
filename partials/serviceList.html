@@ -1,0 +1,95 @@
+<loading visible='isViewLoading'></loading>
+<div class="container-filter">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <a ng-href='#!/filter' class="btn btn-light" role="button">
+                    یافتن بسته مناسب من
+                    <span class="icon icon-filter"></span>
+                </a>
+            </div>
+            <div class="col-12">
+                <div class="filter-selected-tags">
+                    <button class="btn btn-tags" ng-if='filterObject.operator' ng-click='removeOperatorFilter()'>
+                      <span>
+                        {{filterObject.operator.persianTitle}}
+                      </span>
+                      <span class="icon icon-close"></span>
+                    </button>
+                    <button class="btn btn-tags" ng-if='filterObject.serviceType' ng-click='removeServiceType()'>
+                      <span>
+                        {{filterObject.serviceType}}
+                      </span>
+                      <span class="icon icon-close"></span>
+                    </button>
+                    <button class="btn btn-tags" ng-if='filterObject.simType'  ng-click='removeSimType()'>
+                      <span>
+                        {{filterObject.simType.title}}
+                      </span>
+                      <span class="icon icon-close"></span>
+                    </button>
+                    <button class="btn btn-tags" ng-repeat='duration in filterObject.durationList' ng-click='removeDuration(duration)'>
+                      <span>{{duration.title}}</span>
+                      <span class="icon icon-close" ></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-last-order" ng-hide='!lastOrder'>
+    <div class="container">
+        <div class="row no-gutters align-items-center">
+            <div class="col-8">
+                <div class="last-order-mobile-number">
+                    آخرین خرید شما برای شماره
+                    <span class="font-weight-bold">
+                      {{lastOrder.mobileNumber}}
+                    </span>
+                </div>
+                <div class="last-order-package-name">
+                  {{lastOrder.service.title}}
+                </div>
+                <div class="last-order-detail text-right">
+                    <div class="detail-text"><span class="icon icon-sim-card"></span>اعتباری</div>
+                    <div class="detail-text"><span class="icon icon-calendar-page-empty"></span>هفتگی</div>
+                    <div class="detail-text">
+                        <span class="icon icon-pair-of-bills"></span>
+                        <div>
+                          {{lastOrder.service.price | currency}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 text-left">
+                <a ng-href='#!/order/confirm/{{lastOrder.service._id}}/{{lastOrder.mobileNumber}}' title="" class="btn btn-success font-weight-bold">
+                    سفارش مجدد
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-banner">
+    <div class="container">
+        <a class="row no-gutters align-items-center banner-link" href="#" title="">
+            <div class="col-8">
+                <div class="banner-text-content">
+                    <h2 class="banner-title">
+                      نصب برنامه
+                    </h2>
+                    <p class="banner-desc">
+                      تنها طی 2 مرحله بدون نیاز به
+                      AppleID
+                      و تنظیمات پیچیده برنامه را بر روی گوشی خود نصب کنید.
+                    </p>
+                </div>
+            </div>
+            <div class="col-4">
+                <img src="../image/baner.png" alt="" class="img-fluid banner-img">
+            </div>
+        </a>
+    </div>
+</div>
+<servicelist filterobject='filterObject'></servicelist>

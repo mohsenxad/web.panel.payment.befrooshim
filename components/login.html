@@ -1,0 +1,24 @@
+<div class="container-service-list">
+    <div class="container">
+        <div class="row no-gutters">
+            <div class="col-12">
+                <div class="service-list-wrapper">
+                  <div>
+                    <div>
+                      email:
+                      <input type='text' ng-model='$ctrl.user.email'/>
+                    </div>
+                    <div>
+                      password:
+                      <input type='password' ng-model='$ctrl.user.password'/>
+                    </div>
+                    <div>
+                      <button ng-click='$ctrl.login()'>ورود</button>
+                      {{$ctrl.token}}
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

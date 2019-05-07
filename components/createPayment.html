@@ -1,0 +1,43 @@
+<div class="container-service-list">
+    <div class="container">
+        <div class="row no-gutters">
+            <div class="col-12">
+                <div class="service-list-wrapper">
+                  <div>
+                    <div>
+                      مبلغ به ريال:
+                      <input type='text' ng-model='$ctrl.payment.price'/>
+                    </div>
+                    <div>
+                      توضیحات:
+                      <input type='text' ng-model='$ctrl.payment.description'/>
+                    </div>
+                    <div>
+                      شماره موبایل مشتری:
+                      <input type='text' ng-model='$ctrl.payment.customerMobileNumber'/>
+                    </div>
+                    <div>
+                      <button ng-click='$ctrl.create()'>ایجاد</button>
+                    </div>
+                    <div ng-if='$ctrl.createResult.paymentUrl'>
+                      لینک پرداخت
+                      <input type='text' ng-model='$ctrl.createResult.paymentUrl'/>
+                    </div>
+                    <div ng-if='$ctrl.createResult.paymentUrl'>
+                      <a ng-href="whatsapp://send?text={{$ctrl.createResult.paymentUrl}}" data-action="share/whatsapp/share">Share via Whatsapp</a>
+                    </div>
+                    <div ng-if='$ctrl.createResult.paymentUrl'>
+                      <a ng-href="https://telegram.me/share/url?url={{$ctrl.createResult.paymentUrl}}&text={{$ctrl.payment.description}}" data-action="share/telegram/share">Share via Telegram</a>
+                    </div>
+                    <div ng-if='$ctrl.createResult.paymentUrl'>
+                      <a ng-href="sms:+989122707748?body={{$ctrl.payment.description}}%20{{$ctrl.createResult.paymentUrl}}">Send a SMS message</a>
+                    </div>
+                  </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

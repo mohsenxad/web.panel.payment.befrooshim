@@ -1,0 +1,120 @@
+<loading visible='isViewLoading'></loading>
+<div class="background-modal green"></div>
+
+<div class="container-modal">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+
+                <div class="modal-content-wrapper">
+                    <div class="modal-align-middle">
+
+                        <div class="modal-contents">
+
+                            <div class="modal-content-header">
+                                <a role="button" ng-href='#!/service/order/{{serviceId}}/{{mobileNumber}}'><span class="icon icon-close"></span></a>
+                            </div>
+
+                            <div class="modal-content-body">
+                                <h2 class="body-title">تایید درخواست</h2>
+
+                                <!-- <div class="body-use-point">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col-6">
+                                            <button class="btn btn-orange">
+                                                <span class="icon icon-add-button-inside-black-circle"></span>
+                                                <span class="text">استفاده از امتیاز</span>
+                                            </button>
+                                        </div>
+                                        <div class="col-6 text-left">
+                                            <div class="use-point-num">۱۶۹</div>
+                                        </div>
+                                    </div>
+                                </div> -->
+
+                                <div class="body-order-info">
+                                    <div class="item">
+                                        <div class="row no-gutters align-items-start">
+                                            <div class="col-5">
+                                                <div class="item-title">بسته انتخاب شده</div>
+                                            </div>
+                                            <div class="col-7">
+                                                <div class="item-value">{{service.title}}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="row no-gutters align-items-start">
+                                            <div class="col-5">
+                                                <div class="item-title">شماره تلفن وارد شده</div>
+                                            </div>
+                                            <div class="col-7">
+                                                <div class="item-value font-weight-bold">{{mobileNumber}}</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="row no-gutters align-items-start">
+                                            <div class="col-5">
+                                                <div class="item-title">هزینه قابل پرداخت</div>
+                                            </div>
+                                            <div class="col-7">
+                                                <div class="item-value">
+                                                    <span class="item-price">{{service.vatPrice | currency}}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- <div class="body-coupon">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col-6">
+                                            <a href="#" title="" class="coupon-link">
+                                                <span class="text">کپن تخفیف دارید؟</span>
+                                            </a>
+                                        </div>
+                                        <div class="col-6 text-left">
+                                            <div class="coupon-timer">
+                                                <span class="icon icon-stopwatch"></span>
+                                                <span class="timer-time">56</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
+
+                                <div class="body-text">
+                                    آیا از اینکه شماره
+                                    <span>{{mobileNumber}}</span>
+                                    از نوع
+                                    <span>
+                                      {{service.simType.title}} {{service.operator.persianTitle}}
+                                    </span>
+                                    است، مطمئن هستید؟
+                                </div>
+
+                            </div>
+
+                            <div class="modal-content-footer">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <button ng-click='buy()' class="btn btn-success w-100" ng-disable='isLoading'>
+                                          {{confirmButtonText}}
+                                        </button>
+                                    </div>
+                                    <div class="col-6">
+                                        <a class="btn btn-outline-light w-100" role="button" ng-href='#!/service/order/{{serviceId}}/{{mobileNumber}}'>انصراف</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
