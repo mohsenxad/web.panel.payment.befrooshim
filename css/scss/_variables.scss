@@ -1,0 +1,38 @@
+//----------------------------------------
+// VARIABLES.SCSS
+//----------------------------------------
+
+// Core
+$rtl: true !default;
+$direction: rtl !default;
+
+// Brand @ brand-
+$brand-font-family-fa: "IRANSansWeb-Light";
+$brand-font-family-en: "Quicksand", sans-serif;
+
+// initial-variables @ bulma
+$family-sans-serif: quote($brand-font-family-fa), sans-serif;
+$background: #f5f7fa;
+
+$primary: #c72394;
+// $info: $cyan;
+$success: #2ecc71;
+// $warning: $yellow;
+// $danger: $red;
+$light: #f5f7fa;
+$dark: #4e526e;
+
+// generic @ bulma
+$body-size: 13px;
+$body-line-height: 2;
+
+// button @ bulma
+$btn-radius: 21px;
+
+// form @ bulma
+$input-radius: 23px;
+$input-border-color: #dbd7d7;
+
+// ::Typo @ typo-
+$typo-font-normal: "IRANSansWeb";
+$typo-font-bold: "IRANSansWeb-Bold";

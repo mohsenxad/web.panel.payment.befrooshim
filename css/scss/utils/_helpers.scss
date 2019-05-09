@@ -1,0 +1,79 @@
+//----------------------------------------
+// UTIL/HELPERS
+//----------------------------------------
+
+// ::PREVENT % not-
+%not-select {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.not-scroll {
+    overflow-y: hidden;
+}
+
+// ::STATE % is-
+.is-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.is-sticky {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.is-block {
+    display: block;
+}
+
+.is-hide {
+    display: none;
+}
+
+.is-reverse {
+    flex-direction: row-reverse;
+}
+
+.is-100 {
+    width: 100%;
+}
+
+// ::TYPO @ typo-
+.typo-font-normal {
+    font-family: $typo-font-normal !important;
+}
+
+// ::MODIFIER % has-/is-
+
+// ::SPACING @ m-/p-
+$spaceamounts: (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 75, 100); // Adjust this to include the pixel amounts you need.
+$sides: (top, bottom, left, right); // Leave this variable alone
+
+@each $space in $spaceamounts {
+    @each $side in $sides {
+        .m-#{str-slice($side, 0, 1)}-#{$space} {
+            margin-#{$side}: #{$space}px !important;
+        }
+
+        .p-#{str-slice($side, 0, 1)}-#{$space} {
+            padding-#{$side}: #{$space}px !important;
+        }
+    }
+}
+
+.p-0 {
+    padding: 0 !important;
+}
+
+.m-0 {
+    margin: 0 !important;
+}

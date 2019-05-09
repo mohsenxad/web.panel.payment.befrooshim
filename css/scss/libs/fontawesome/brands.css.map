@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA,UAUC;EATC,WAAW,EAAE,MAAM;EACnB,UAAU,EAAE,MAAM;EAClB,WAAW,EAAE,MAAM;EACnB,GAAG,EAAE,4CAAyC;EAC9C,GAAG,EAAE,sVAI8D;AAGrE,IAAK;EACH,WAAW,EAAE,MAAM",
+"sources": ["brands.scss"],
+"names": [],
+"file": "brands.css"
+}

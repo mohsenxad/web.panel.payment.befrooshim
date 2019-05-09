@@ -1,31 +1,36 @@
-<div class="container-service-list">
-    <div class="container">
-        <div class="row no-gutters">
-            <div class="col-12">
-                <div class="service-list-wrapper">
-                  <div>
-                    <div>
-                      username:
-                      <input type='text' ng-model='$ctrl.user.username'/>
-                    </div>
-                    <div>
-                      mobileNumber:
-                      <input type='text' ng-model='$ctrl.user.mobileNumber'/>
-                    </div>
-                    <div>
-                      email:
-                      <input type='text' ng-model='$ctrl.user.email'/>
-                    </div>
-                    <div>
-                      password:
-                      <input type='text' ng-model='$ctrl.user.password'/>
-                    </div>
-                    <div>
-                      <button ng-click='$ctrl.save()'>ذخیره</button>
-                    </div>
-                  </div>
-                </div>
-            </div>
+<img src="images/logo.jpg" alt="">
+<h3>ایجاد حساب کاربری</h3>
+<form action="">
+    <div class="field">
+        <label class="label">نام کاربری</label>
+        <div class="control">
+            <input class="input is-large" type="text" ng-model="$ctrl.user.username">
         </div>
     </div>
-</div>
+    <div class="field">
+        <label class="label">ایمیل</label>
+        <div class="control">
+            <input class="input is-large" type="text" ng-model="$ctrl.user.email">
+        </div>
+    </div>
+    <div class="field">
+        <label class="label">شماره تلفن همراه</label>
+        <div class="control">
+            <input class="input is-large" type="text" ng-model="$ctrl.user.mobileNumber">
+        </div>
+    </div>
+    <div class="field">
+        <label class="label">رمز عبور</label>
+        <div class="control">
+            <input class="input is-large" type="text" ng-model="$ctrl.user.password">
+        </div>
+    </div>
+    <div class="field is-grouped">
+        <div class="control">
+            <button class="button  is-rounded is-primary" ng-click="$ctrl.save()">ثبت نام</button>
+        </div>
+        <div class="control">
+            عضو هستید؟ <button class="button is-text has-text-primary" ng-click="$ctrl.loginBtn()">ورود</button>
+        </div>
+    </div>
+</form>

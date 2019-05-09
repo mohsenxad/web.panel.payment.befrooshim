@@ -1,24 +1,26 @@
-<div class="container-service-list">
-    <div class="container">
-        <div class="row no-gutters">
-            <div class="col-12">
-                <div class="service-list-wrapper">
-                  <div>
-                    <div>
-                      email:
-                      <input type='text' ng-model='$ctrl.user.email'/>
-                    </div>
-                    <div>
-                      password:
-                      <input type='password' ng-model='$ctrl.user.password'/>
-                    </div>
-                    <div>
-                      <button ng-click='$ctrl.login()'>ورود</button>
-                      {{$ctrl.token}}
-                    </div>
-                  </div>
-                </div>
-            </div>
+<img src="images/logo.jpg" alt="">
+<h3>ورود به حساب کاربری</h3>
+<form action="">
+    <div class="field">
+        <label class="label">نام کاربری</label>
+        <div class="control">
+            <input class="input is-large" type="text" ng-model="$ctrl.user.email">
         </div>
     </div>
-</div>
+    <div class="field">
+        <label class="label">رمز عبور</label>
+        <div class="control">
+            <input class="input is-large" type="text" ng-model="$ctrl.user.password">
+            <a href="">فراموشی رمز عبور</a>
+        </div>
+    </div>
+    <div class="field is-grouped">
+        <div class="control">
+            <button class="button  is-rounded is-primary" ng-click="$ctrl.login()">ورود</button>
+            {{$ctrl.token}}
+        </div>
+        <div class="control">
+            عضو نیستید؟ <button class="button is-text has-text-primary" ng-click="$ctrl.signupBtn()">ثبت نام</button>
+        </div>
+    </div>
+</form>

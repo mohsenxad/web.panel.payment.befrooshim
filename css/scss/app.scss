@@ -1,0 +1,57 @@
+/*
+Project Name: web.panel.payment.befrooshim
+Author: Hamid Yaftian
+File: Main SCSS File
+*/
+
+/* =================
+00. Core
+01. libsrary
+02. Base
+03. Components
+04. Modules
+05. Partials
+06. Helpers
+07. Vendors
+08. Overwrite
+================= */
+
+// Core files
+// ===== 00. Core ===== //
+@import "libs/bourbon/bourbon";
+@import "libs/bulma/scss/utilities/initial-variables";
+@import "libs/bulma/scss/utilities/functions";
+@import "variables";
+@import "libs/bulma/scss/utilities/derived-variables";
+@import "libs/bulma/scss/utilities/animations";
+@import "libs/bulma/scss/utilities/mixins";
+@import "libs/bulma/scss/utilities/controls";
+@import "utils/functions";
+@import "utils/mixins";
+
+
+/* ===== 01. library ===== */
+@import "libs/bulma/bulma";
+
+/* ===== 02. Base ===== */
+@import "base/font";
+@import "base/core";
+
+/* ===== 03. Components ===== */
+
+
+/* ===== 04. Modules ===== */
+@import "modules/m-animate";
+
+/* ===== 05. Partials ===== */
+@import "partials/auth";
+
+/* ===== 06. Helpers (Utils) ===== */
+@import "utils/helpers";
+
+/* ===== 07. Vendors ===== */
+@import "libs/line-awesome/css/line-awesome.min.css";
+
+/* ===== 08. Overwrite ===== */
+@import "hacks/base";
+@import "hacks/form";

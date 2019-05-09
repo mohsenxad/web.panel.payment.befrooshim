@@ -1,0 +1,8 @@
+.c-auth {
+    &__box {
+        background-color: $white;
+        border-radius: 5px;
+        padding: 36px 68px;
+        @include shadow();
+    }
+}
