@@ -6,33 +6,90 @@
 $rtl: true !default;
 $direction: rtl !default;
 
+$color-background: #f5f7fa;
+
 // Brand @ brand-
-$brand-font-family-fa: "IRANSansWeb-Light";
+$brand-font-family: "IRANSansWeb";
+$brand-font-family-heading: "IRANSansWeb-Medium";
 $brand-font-family-en: "Quicksand", sans-serif;
 
-// initial-variables @ bulma
-$family-sans-serif: quote($brand-font-family-fa), sans-serif;
-$background: #f5f7fa;
+// FONTFAMILY @ kube
+$font-family-text: quote($brand-font-family), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 
-$primary: #c72394;
-// $info: $cyan;
-$success: #2ecc71;
-// $warning: $yellow;
-// $danger: $red;
-$light: #f5f7fa;
-$dark: #4e526e;
+// COLORS @ kube
+// Base
+$color-black: #2f3247;
+$color-red: #ea554c;
+$color-orange: #d2913c;
+$color-yellow: #d2913c;
+$color-blue: #2fb3f3;
+$color-purple: #c72394;
+$color-green: #2ecc71;
+$color-inverted: #f5f7fa;
 
-// generic @ bulma
-$body-size: 13px;
-$body-line-height: 2;
+// Text
+$color-text: #4e526e;
+$color-text-secondary: #2f3247;
+$color-text-tertiary: #687591;
+$color-text-disabled: #aaa5a5;
 
-// button @ bulma
-$btn-radius: 21px;
+// Links
+$color-link: $color-purple;
+$color-link-hover: #d54baa;
 
-// form @ bulma
-$input-radius: 23px;
-$input-border-color: #dbd7d7;
+// States
+$color-error: $color-red;
+$color-success: $color-green;
+$color-focus: $color-blue;
+$color-warning: $color-orange;
 
-// ::Typo @ typo-
-$typo-font-normal: "IRANSansWeb";
-$typo-font-bold: "IRANSansWeb-Bold";
+// Accent
+$color-accent: $color-purple;
+$color-highlight: #f9fbfe;
+
+// Button
+$color-button: $color-purple;
+
+
+// =HEADINGS
+// ---------------------------------------------------------------------------
+
+// Weight
+$headings-font-weight: normal;
+
+
+// =FORM
+// ---------------------------------------------------------------------------
+
+// label
+$form-label-font-size: $font-size-small;
+$form-label-color-text: $color-text;
+
+
+// =INPUT
+// ---------------------------------------------------------------------------
+
+// default
+$input-default-font-size: $font-size-smaller;
+$input-default-border-color: #dbd7d7;
+$input-default-border-radius: 23px;
+
+
+// =BUTTON
+// ---------------------------------------------------------------------------
+
+// default
+$button-default-font-size: $font-size-small;
+$button-default-background: $color-accent;
+$button-default-color-text: #fff;
+$button-default-border-radius: 23px;
+
+// secondary
+$button-secondary-font-size: $font-size-small;
+$button-secondary-color-text: $color-accent;
+$button-secondary-border-color: $color-accent;
+$button-secondary-border-radius: 23px;
+
+// tertiary
+$button-tertiary-font-size: $font-size-small;
+$button-tertiary-color-text: $color-accent;

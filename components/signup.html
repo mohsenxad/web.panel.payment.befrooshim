@@ -1,36 +1,36 @@
-<img src="images/logo.jpg" alt="">
-<h3>ایجاد حساب کاربری</h3>
-<form action="">
-    <div class="field">
-        <label class="label">نام کاربری</label>
-        <div class="control">
-            <input class="input is-large" type="text" ng-model="$ctrl.user.username">
-        </div>
+<form action="" class="[ m-form ]">
+    <h3 class="[ m-form__title ]">ایجاد حساب کاربری</h3>
+
+    <div class="form-item">
+        <label>نام کاربری</label>
+        <input class="" type="text" ng-model="$ctrl.user.username">
     </div>
-    <div class="field">
-        <label class="label">ایمیل</label>
-        <div class="control">
-            <input class="input is-large" type="text" ng-model="$ctrl.user.email">
-        </div>
+
+    <div class="form-item">
+        <label>ایمیل</label>
+        <input class="" type="text" ng-model="$ctrl.user.email">
     </div>
-    <div class="field">
-        <label class="label">شماره تلفن همراه</label>
-        <div class="control">
-            <input class="input is-large" type="text" ng-model="$ctrl.user.mobileNumber">
-        </div>
+
+    <div class="form-item">
+        <label>شماره تلفن همراه</label>
+        <input class="" type="text" ng-model="$ctrl.user.mobileNumber">
     </div>
-    <div class="field">
-        <label class="label">رمز عبور</label>
-        <div class="control">
-            <input class="input is-large" type="text" ng-model="$ctrl.user.password">
-        </div>
+
+    <div class="form-item">
+        <label>رمز عبور</label>
+        <input class="" type="text" ng-model="$ctrl.user.password">
     </div>
-    <div class="field is-grouped">
-        <div class="control">
-            <button class="button  is-rounded is-primary" ng-click="$ctrl.save()">ثبت نام</button>
-        </div>
-        <div class="control">
-            عضو هستید؟ <button class="button is-text has-text-primary" ng-click="$ctrl.loginBtn()">ورود</button>
+
+    <div class="[ m-form__bottom-bar ]">
+        <div class="row between-xs">
+            <div class="col-xs-5">
+                <button class="button is-100" ng-click="$ctrl.save()">ثبت نام</button>
+                {{$ctrl.token}}
+            </div>
+            <div class="col-xs-6 [ is-align-left ]">
+                <span>عضو هستید؟</span>
+                <a class="[ m-form__button-in-text ]" ng-click="$ctrl.loginBtn()">ورود</a>
+            </div>
         </div>
     </div>
 </form>

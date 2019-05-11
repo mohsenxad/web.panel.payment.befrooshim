@@ -1,0 +1,23 @@
+// typo @ kube
+// Headings
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $brand-font-family-heading;
+}
+
+// form @ kube
+input,
+textarea,
+select {
+    padding    : 13px 35px;
+    line-height: 23px;
+    min-height : 45px;
+}
+
+.form-item label {
+    margin-bottom: 10px;
+}

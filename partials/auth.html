@@ -1,13 +1,10 @@
-<section class="hero is-fullheight [ c-auth ]">
-    <div class="hero-body">
-        <div class="container">
-            <div class="columns is-centered">
-                <div class="column is-4 [ c-auth__box m-animate ]">
-                    <div class="[ m-animate__container ]">
-                        <login ng-if="login"></login>
-                        <signup ng-if="!login"></signup>
-                    </div>
-                </div>
+<section class="[ p-auth ]">
+    <div class="[ container ]">
+        <div class="row center-xs">
+            <div class="col-xs-12 col-sm-8 col-md-6 col-lg-5 [ p-auth__box ]">
+                <img class="m-b-40" src="images/logo.jpg" alt="">
+                <login ng-if="login"></login>
+                <signup ng-if="!login"></signup>
             </div>
         </div>
     </div>

@@ -2,28 +2,6 @@
 // UTIL/HELPERS
 //----------------------------------------
 
-// ::PREVENT % not-
-%not-select {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-.not-scroll {
-    overflow-y: hidden;
-}
-
-// ::STATE % is-
-.is-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
-
 .is-sticky {
     position: fixed;
     left: 0;
@@ -39,20 +17,21 @@
     display: none;
 }
 
-.is-reverse {
-    flex-direction: row-reverse;
+// ::align
+.is-align {
+    &-right {
+        text-align: right !important;
+    }
+    &-left {
+        text-align: left !important;
+    }
+    &-center {
+        text-align: center !important;
+    }
+    &-justify {
+        text-align: justify !important;
+    }
 }
-
-.is-100 {
-    width: 100%;
-}
-
-// ::TYPO @ typo-
-.typo-font-normal {
-    font-family: $typo-font-normal !important;
-}
-
-// ::MODIFIER % has-/is-
 
 // ::SPACING @ m-/p-
 $spaceamounts: (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 75, 100); // Adjust this to include the pixel amounts you need.

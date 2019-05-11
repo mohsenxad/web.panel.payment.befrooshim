@@ -1,8 +1,11 @@
-.c-auth {
+.p-auth {
+    @extend %hero;
+
     &__box {
-        background-color: $white;
-        border-radius: 5px;
-        padding: 36px 68px;
+        background-color: #fff;
+        border-radius   : 5px;
+        padding         : 36px 68px;
+        text-align      : right;
         @include shadow();
     }
 }
