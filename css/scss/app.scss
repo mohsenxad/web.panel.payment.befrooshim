@@ -37,6 +37,8 @@ File: Main SCSS File
 @import "base/core";
 
 /* ===== 03. Components ===== */
+@import "components/c-header";
+@import "components/c-menu";
 
 /* ===== 04. Modules ===== */
 @import "modules/m-form";
@@ -48,7 +50,7 @@ File: Main SCSS File
 @import "utils/helpers";
 
 /* ===== 07. Vendors ===== */
-@import "libs/line-awesome/css/line-awesome.min.css";
+@import "libs/icomoon/icon";
 
 /* ===== 08. Overwrite ===== */
 @import "hack";

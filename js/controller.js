@@ -138,4 +138,5 @@ angular.module('panel.payment.befrooshim.controller', ['panel.payment.befrooshim
     .controller('authCtrl', function ($rootScope, $location) {
         // $scope.path = $location.path();
         $rootScope.login = true;
-    });
+    })
+    .controller('addUserGatewayCtrl', function () {});

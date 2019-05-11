@@ -1,13 +1,4 @@
 angular.module('panel.payment.befrooshim.components', ['panel.payment.befrooshim.services'])
-    // .component('auth', {
-    //     bindings: {},
-    //     controller: function ($location) {
-    //         var $ctrl = this;
-    //         var path = $location.absUrl();
-    //         $ctrl.path = path;
-    //     },
-    //     templateUrl: './components/auth.html'
-    // })
     .component('signup', {
         bindings: {},
         controller: function($rootScope, userServices) {
@@ -87,6 +78,13 @@ angular.module('panel.payment.befrooshim.components', ['panel.payment.befrooshim
             var $ctrl = this;
         },
         templateUrl: './components/menu.html'
+    })
+    .component('header', {
+        bindings: {},
+        controller: function() {
+            var $ctrl = this;
+        },
+        templateUrl: './components/header.html'
     })
     .component('createpayment', {
         bindings: {
@@ -305,4 +303,11 @@ angular.module('panel.payment.befrooshim.components', ['panel.payment.befrooshim
             var $ctrl = this;
         },
         templateUrl: './components/loading.html'
+    })
+    .component('footer', {
+        bindings: {},
+        controller: function () {
+            var $ctrl = this;
+        },
+        templateUrl: './components/footer.html'
     });

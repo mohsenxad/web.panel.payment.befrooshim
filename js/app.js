@@ -17,6 +17,10 @@ angular.module('App', [
                 templateUrl: 'partials/auth.html',
                 controller: 'authCtrl',
             })
+            .when('/userGateway/add', {
+                templateUrl: 'partials/addUserGateway.html',
+                controller: 'addUserGatewayCtrl'
+            })
             .when('/userGateway/list/:token', {
                 templateUrl: 'partials/userGatewayList.html',
                 controller: 'userGatewayListCtrl'
