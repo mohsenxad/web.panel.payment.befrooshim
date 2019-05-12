@@ -1,0 +1,25 @@
+.c-header {
+    background-color: #fff;
+    padding: 15px 0;
+
+    &__menu {
+        .button {
+
+            &,
+            &:hover,
+            &focus {
+                text-decoration: none;
+                color: $color-text;
+            }
+        }
+
+        span[class^="fa"] {
+            font-size: 24px;
+            margin-left: 10px;
+
+            &.is-caret {
+                font-size: 10px;
+            }
+        }
+    }
+}

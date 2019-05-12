@@ -1,31 +1,36 @@
-<div class="container-service-list">
-    <div class="container">
-        <div class="row no-gutters">
-            <div class="col-12">
-                <div class="service-list-wrapper">
-                  <div>
-                    <div>
-                      username:
-                      <input type='text' ng-model='$ctrl.user.username'/>
-                    </div>
-                    <div>
-                      mobileNumber:
-                      <input type='text' ng-model='$ctrl.user.mobileNumber'/>
-                    </div>
-                    <div>
-                      email:
-                      <input type='text' ng-model='$ctrl.user.email'/>
-                    </div>
-                    <div>
-                      password:
-                      <input type='text' ng-model='$ctrl.user.password'/>
-                    </div>
-                    <div>
-                      <button ng-click='$ctrl.save()'>ذخیره</button>
-                    </div>
-                  </div>
-                </div>
+<form action="" class="[ m-form ]">
+    <h3 class="[ m-form__title ]">ایجاد حساب کاربری</h3>
+
+    <div class="form-item">
+        <label>نام کاربری</label>
+        <input class="" type="text" ng-model="$ctrl.user.username">
+    </div>
+
+    <div class="form-item">
+        <label>ایمیل</label>
+        <input class="" type="text" ng-model="$ctrl.user.email">
+    </div>
+
+    <div class="form-item">
+        <label>شماره تلفن همراه</label>
+        <input class="" type="text" ng-model="$ctrl.user.mobileNumber">
+    </div>
+
+    <div class="form-item">
+        <label>رمز عبور</label>
+        <input class="" type="text" ng-model="$ctrl.user.password">
+    </div>
+
+    <div class="[ m-form__bottom-bar ]">
+        <div class="row between-xs">
+            <div class="col-xs-5">
+                <button class="button is-100" ng-click="$ctrl.save()">ثبت نام</button>
+                {{$ctrl.token}}
+            </div>
+            <div class="col-xs-6 [ is-align-left ]">
+                <span>عضو هستید؟</span>
+                <a class="[ m-form__button-in-text ]" ng-click="$ctrl.loginBtn()">ورود</a>
             </div>
         </div>
     </div>
-</div>
+</form>

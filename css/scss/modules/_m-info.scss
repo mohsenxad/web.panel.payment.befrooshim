@@ -1,0 +1,37 @@
+.m-info {
+    &__text {
+        font-size: $font-size-large;
+        margin: 10px 0;
+        display: block;
+
+        &.is-success {
+            color: $color-success;
+        }
+    }
+
+    &__badge {
+        display: inline-block !important;
+        font-size: 12px;
+        border-radius: 13px;
+        padding: 3px 13px;
+
+        &.is-warning {
+            color: $color-warning;
+            background-color: lighten($color-warning, 45);
+        }
+    }
+
+    &__box {
+        border-right: 8px solid transparent;
+        padding: 28px 48px 28px 14px;
+        @include shadow();
+
+        p {
+            font-size: $font-size-small;
+        }
+
+        &.is-focus {
+            border-right-color: $color-focus;
+        }
+    }
+}

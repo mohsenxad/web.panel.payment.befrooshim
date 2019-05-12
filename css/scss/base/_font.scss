@@ -1,0 +1,8 @@
+//----------------------------------------
+// BASE/FONT.SCSS
+//----------------------------------------
+
+// IranSansWeb
+@include font-face("IRANSansWeb", "../fonts/IRANSansWeb/IRANSansWeb", ("eot", "ttf", "woff", "woff2"));
+@include font-face("IRANSansWeb-Light", "../fonts/IRANSansWeb/IRANSansWeb_Light", ("eot", "ttf", "woff", "woff2"));
+@include font-face("IRANSansWeb-Medium", "../fonts/IRANSansWeb/IRANSansWeb_Medium", ("eot", "ttf", "woff", "woff2"));

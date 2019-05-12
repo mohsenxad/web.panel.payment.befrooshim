@@ -1,0 +1,232 @@
+.m-wizard {
+    margin: 0;
+
+    ul {
+        list-style: none;
+        margin: 0 auto;
+        margin-bottom: 40px;
+        display: table;
+        width: 70%;
+        position: relative;
+        overflow: hidden;
+
+        li {
+            display: table-cell;
+            text-align: center;
+            position: relative;
+            min-width: 100px;
+
+            &:before {
+                content: "";
+                display: block;
+                height: 2px;
+                background-color: #4e526e1c;
+                position: absolute;
+                top: 18px;
+                left: auto;
+                right: 0;
+                width: 39%;
+                z-index: -1;
+            }
+
+            &:after {
+                content: "";
+                display: block;
+                height: 2px;
+                background-color: #4e526e1c;
+                position: absolute;
+                top: 18px;
+                left: 0;
+                right: auto;
+                width: 39%;
+                z-index: -1;
+            }
+
+            &:first-child {
+                &::before {
+                    display: none;
+                }
+            }
+
+            &:last-child {
+                &::after {
+                    display: none;
+                }
+            }
+
+            span {
+                display: inline-block;
+                border: 1px solid #4e526e;
+                border-radius: 50%;
+                width: 35px;
+                height: 35px;
+                line-height: 35px;
+                margin-bottom: 16px;
+            }
+
+            &.current {
+                span {
+                    color: #fff;
+                    background-color: $color-text;
+                }
+            }
+
+            &.done {
+                &:before,
+                &:after,
+                &+li:before {
+                    background-color: $color-success;
+                }
+
+                span {
+                    color: #fff;
+                    background-color: $color-success;
+                    border: 1px solid $color-success;
+                }
+            }
+
+            a {
+                color: $color-text;
+                font-size: $font-size-small;
+                display: block;
+            }
+        }
+    }
+
+    .steps {
+        background-color: #fff;
+        border-radius: 5px;
+        @include shadow();
+    }
+
+    &__form {
+        padding: 60px 60px 60px 100px;
+        position: relative;
+    }
+
+    &__control {
+        position: absolute;
+        bottom: 60px;
+        left: 100px;
+        right: 60px;
+
+        .--right {
+            float: right;
+            text-align: right;
+        }
+
+        .--left {
+            float: left;
+            text-align: left;
+        }
+
+        @include clearfix;
+    }
+
+    &__help {
+        padding: 40px;
+        background-color: #f9f9f9;
+
+        img {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 30px;
+        }
+
+        h4 {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin: 0;
+            font-size: 14px;
+            text-align: justify;
+            line-height: 22px;
+        }
+    }
+}
+
+
+
+
+
+
+// $number-of-steps: 4;
+
+// $line-width: 2px;
+// $bullet-size: 2em;
+
+// $background-color: black;
+// $foreground-color: #555;
+
+// $active-background-color: #00FF00;
+// $active-foreground-color: black;
+
+// body {
+//     font-family: monospace;
+//     background-color: $background-color;
+//     margin: 2em 1em;
+// }
+
+// ol {
+//     background-color: black;
+//     position: relative;
+//     overflow: hidden;
+//     counter-reset: wizard;
+// }
+
+// li {
+//     position: relative;
+//     float: left;
+//     width: 100% / $number-of-steps;
+//     text-align: center;
+//     color: $active-background-color;
+// }
+
+// .current~li {
+//     color: $foreground-color;
+// }
+
+// li:before {
+//     counter-increment: wizard;
+//     content: counter(wizard);
+//     display: block;
+//     color: $active-foreground-color;
+//     background-color: $active-background-color;
+//     border: $line-width solid $active-background-color;
+//     text-align: center;
+//     width: $bullet-size;
+//     height: $bullet-size;
+//     line-height: $bullet-size;
+//     border-radius: $bullet-size;
+//     position: relative;
+//     left: 50%;
+//     margin-bottom: $bullet-size / 2;
+//     margin-left: $bullet-size * -0.5;
+//     z-index: 1;
+
+//     .current~& {
+//         background-color: $background-color;
+//         color: $foreground-color;
+//         border-color: $foreground-color;
+//     }
+// }
+
+// li+li {
+//     &:after {
+//         content: "";
+//         display: block;
+//         width: 100%;
+//         background-color: $active-background-color;
+//         height: $line-width;
+//         position: absolute;
+//         left: -50%;
+//         top: $bullet-size / 2;
+//         z-index: 0;
+//     }
+// }
+
+// .current~li:after {
+//     background-color: $foreground-color;
+// }

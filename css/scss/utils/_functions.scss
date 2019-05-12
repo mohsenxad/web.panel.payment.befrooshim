@@ -1,0 +1,13 @@
+//----------------------------------------
+// UTIL/FUNCTIONS
+//----------------------------------------
+
+// ::UNIT
+@function unit($unit, $var) {
+    @if($var !='inherit') {
+        @return $var*(1#{$unit});
+    }
+    @else {
+        @return $var;
+    }
+}

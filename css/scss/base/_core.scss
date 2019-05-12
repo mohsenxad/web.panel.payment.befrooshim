@@ -1,0 +1,16 @@
+//----------------------------------------
+// BASE/CORE.SCSS
+//----------------------------------------
+
+body {
+    background-color: $color-background;
+}
+
+p {
+    font-size: $font-size-small;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
