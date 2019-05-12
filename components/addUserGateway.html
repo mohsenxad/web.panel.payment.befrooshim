@@ -1,4 +1,193 @@
-اضافه کردن درگاه
+<section class="[ c-ug-add ]">
+    <div class="container">
+        <h4 class="[ b-breadcrumb ]">افزودن درگاه</h4>
+        <wizard class="[ m-wizard ]">
+            <wz-step wz-title="ثبت اطلاعات اولیه" wz-number="1">
+                <div class="row [ m-wizard__content ]">
+                    <div class="col-xs-7 [ m-wizard__form ]">
+                        <h5 class="m-b-40">ثبت اطلاعات اولیه</h5>
+                        <div class="[ m-form ]">
+                            <div class="form-item">
+                                <label>عنوان درگاه</label>
+                                <input type="text" ng-model="$ctrl.userGateway.title">
+                            </div>
+                            <div class="form-item">
+                                <label>انتخاب بانک</label>
+                                <div class="[ m-select ]">
+                                    <input type="checkbox">
+                                    <div class="[ m-select__button ]">
+                                        <div class="[ m-select__button__selected-value ]">
+                                            <span>انتخاب کنید</span>
+                                        </div>
+                                        <div class="[ m-select__button__chevrons ]">
+                                            <i class="fas fa-chevron-up"></i>
+                                            <i class="fas fa-chevron-down"></i>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="[ m-select__options ]">
+                                        <div class="[ m-select__options ]">
+                                            <input class="s-c top" type="radio" name="platform" value="codepen">
+                                            <input class="s-c bottom" type="radio" name="platform" value="codepen">
+                                            <i class="fab fa-codepen"></i>
+                                            <span class="label">CodePen</span>
+                                            <span class="opt-val">CodePen</span>
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row [ m-wizard__control ]">
+                            <div class="col-xs-6 [ --right ]"></div>
+                            <div class="col-xs-6 [ --left ]">
+                                <button class="button is-icon [ is-success ]" wz-next>
+                                    مرحله بعد: ثبت اطلاعات امنیتی
+                                    <span class="icon-left-arrow"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-5 [ m-wizard__help ]">
+                        <img src="images/focus_working.png" alt="">
+                        <h4>چگونه کار می کند؟</h4>
+                        <p>
+                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت
+                            که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+                        </p>
+                    </div>
+                </div>
+            </wz-step>
+            <wz-step wz-title="ثبت اطلاعات امنیتی" wz-number="2">
+                <div class="row [ m-wizard__content ]">
+                    <div class="col-xs-7 [ m-wizard__form ]">
+                        <h5 class="m-b-40">ثبت اطلاعات امنیتی</h5>
+                        <div class="[ m-form ]">
+                            <div class="form-item">
+                                <label>پارامتر 1</label>
+                                <input type="text" ng-model="">
+                            </div>
+                            <div class="form-item">
+                                <label>پارامتر 2</label>
+                                <input type="text" ng-model="">
+                            </div>
+                            <div class="form-item">
+                                <label>پارامتر 3</label>
+                                <input type="text" ng-model="">
+                            </div>
+                        </div>
+                        <div class="row [ m-wizard__control ]">
+                            <div class="col-xs-6 [ --right ]">
+                                <button class="button is-icon [ is-inverted ]" wz-previous>
+                                    <span class="fas fa-arrow-right"></span>
+                                    مرحله قبل
+                                </button>
+                            </div>
+                            <div class="col-xs-6 [ --left ]">
+                                <button class="button is-icon [ is-success ]" wz-next>
+                                    مرحله بعد: ایجاد پرداخت تستی
+                                    <span class="fas fa-arrow-left"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-5 [ m-wizard__help ]">
+                        <img src="images/focus_working.png" alt="">
+                        <h4>چگونه کار می کند؟</h4>
+                        <p>
+                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت
+                            که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+                        </p>
+                    </div>
+                </div>
+            </wz-step>
+            <wz-step wz-title="ایجاد پرداخت تستی" wz-number="3">
+                <div class="row [ m-wizard__content ]">
+                    <div class="col-xs-7 [ m-wizard__form ]">
+                        <h5 class="m-b-40">ایجاد پرداخت تستی</h5>
+                        <div class="[ m-info__box is-focus ]">
+                            <p>
+                                برای تست درگاه لازم است یک پرداخت بصورت نمونه صورت پذیرد. پس از انجام پرداخت تست، هزینه کسر شده مجددا به حساب شما برگشت داده می شود
+                            </p>
+                            <button class="button is-secondary [ is-focus ]">
+                                انجام پرداخت تستی
+                            </button>
+                        </div>
+                        <div class="row [ m-wizard__control ]">
+                            <div class="col-xs-6 [ --right ]">
+                                <button class="button is-icon [ is-inverted ]" wz-previous>
+                                    <span class="fas fa-arrow-right"></span>
+                                    مرحله قبل
+                                </button>
+                            </div>
+                            <div class="col-xs-6 [ --left ]">
+                                <button class="button is-icon [ is-success ]" wz-next>
+                                    مرحله بعد: تایید درگاه
+                                    <span class="fas fa-arrow-left"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-5 [ m-wizard__help ]">
+                        <img src="images/focus_working.png" alt="">
+                        <h4>چگونه کار می کند؟</h4>
+                        <p>
+                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت
+                            که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+                        </p>
+                    </div>
+                </div>
+            </wz-step>
+            <wz-step wz-title="تایید درگاه" wz-number="4">
+                <div class="row [ m-wizard__content ]">
+                    <div class="col-xs-7 [ m-wizard__form ]">
+                        <h5 class="m-b-40">تایید درگاه</h5>
+                        <span class="[ m-info__text is-success ]">درگاه با موفقیت ایجاد شد</span>
+                        <p>لازم به ذکر است تایید نهایی درگاه توسط بانک صورت می پذیرد</p>
+                        <!-- this should convert to component -->
+                        <div class="[ c-ug-item ]">
+                            <div class="row middle-xs">
+                                <div class="col-xs">
+                                    <img src="images/bank-logo.png" alt="">
+                                </div>
+                                <div class="col-xs-6">
+                                    <span class="is-smaller m-b-10">فروشگاه</span>
+                                    <p>فروشگاه اینترنتی شارژ اینترنت همراه</p>
+                                </div>
+                                <div class="col-xs">
+                                    <span class="is-smaller m-b-10">وضعیت</span>
+                                    <span class="[ m-info__badge is-warning ]">در انتظار تایید</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end -->
+                        <div class="row [ m-wizard__control ]">
+                            <div class="col-xs-6 [ --right ]"></div>
+                            <div class="col-xs-6 [ --left ]">
+                                <button class="button is-icon [ is-success ]" wz-next>
+                                    مشاهده لیست درگاه
+                                    <span class="fas fa-arrow-left"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-5 [ m-wizard__help ]">
+                        <img src="images/focus_working.png" alt="">
+                        <h4>چگونه کار می کند؟</h4>
+                        <p>
+                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت
+                            که تمام و دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.
+                        </p>
+                    </div>
+                </div>
+            </wz-step>
+        </wizard>
+    </div>
+</section>
+
+
+
+
+
+<!-- اضافه کردن درگاه
 <ul>
   <li>
     عنوان درگاه:
@@ -27,4 +216,4 @@
     <input type='text' ng-model='$ctrl.userGateway.credentials[field]'/>
   </li>
 </ul>
-<button ng-click='$ctrl.save()'>ذخیره</button>
+<button ng-click='$ctrl.save()'>ذخیره</button> -->

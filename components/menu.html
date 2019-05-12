@@ -1,21 +1,30 @@
 <section class="[ c-menu ]">
     <div class="[ container ]">
-        <ul>
-            <li>
+        <ul class="[ c-menu__list ]">
+            <li class="[ c-menu__item is-active ]">
                 <a ng-href='#!/userGateway/list/{{$ctrl.token}}'>
-                    مدیریت درگاه ها
+                    <span class="far fa-plus-square"></span>
+                    افزودن درگاه
                 </a>
             </li>
-            <li>
+            <li class="[ c-menu__item ]">
+                <a ng-href='#!/userGateway/list/{{$ctrl.token}}'>
+                    <span class="far fa-list-alt"></span>
+                    لیست درگاه ها
+                </a>
+            </li>
+            <li class="[ c-menu__item ]">
                 <a ng-href='#!/payment/list/{{$ctrl.token}}'>
+                    <span class="fas fa-receipt"></span>
                     مدیریت پرداخت ها
                 </a>
             </li>
-            <li>
+            <!-- <li class="[ c-menu__item ]">
                 <a ng-href='#!/'>
+                    <span class="far fa-plus-square"></span>
                     خروج
                 </a>
-            </li>
+            </li> -->
         </ul>
     </div>
 </section>

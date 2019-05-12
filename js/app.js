@@ -1,6 +1,6 @@
 angular.module('App', [
         'ngRoute',
-        'ngAnimate',
+        'mgo-angular-wizard',
         'panel.payment.befrooshim.controller',
         'panel.payment.befrooshim.components'
     ])

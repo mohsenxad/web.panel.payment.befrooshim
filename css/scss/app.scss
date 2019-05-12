@@ -35,13 +35,19 @@ File: Main SCSS File
 /* ===== 02. Base ===== */
 @import "base/font";
 @import "base/core";
+@import "base/general";
 
 /* ===== 03. Components ===== */
 @import "components/c-header";
+@import "components/c-ug-item";
 @import "components/c-menu";
+@import "components/c-footer";
 
 /* ===== 04. Modules ===== */
 @import "modules/m-form";
+@import "modules/m-select";
+@import "modules/m-wizard";
+@import "modules/m-info";
 
 /* ===== 05. Partials ===== */
 @import "partials/auth";

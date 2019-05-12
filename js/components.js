@@ -304,6 +304,13 @@ angular.module('panel.payment.befrooshim.components', ['panel.payment.befrooshim
         },
         templateUrl: './components/loading.html'
     })
+    .component('ugItem', {
+        bindings: {},
+        controller: function () {
+            var $ctrl = this;
+        },
+        templateUrl: './components/userGatewayItem.html'
+    })
     .component('footer', {
         bindings: {},
         controller: function () {

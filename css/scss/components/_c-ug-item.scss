@@ -1,0 +1,16 @@
+.c-ug-item {
+    padding: 35px 20px;
+    @include shadow(1);
+
+    img {
+        max-width: 80px;
+    }
+
+    span {
+        display: block;
+    }
+
+    p {
+        margin: 0;
+    }
+}

@@ -1,3 +1,31 @@
 .c-menu {
-    
+    background-color: #fff;
+    border-top: 1px solid rgba(231, 233, 245, 0.7);
+
+    &__list {
+        list-style: none;
+        margin: 0;
+    }
+
+    &__item {
+        display: inline-block;
+        margin-left: 15px;
+        border-bottom: 3px solid transparent;
+
+        &.is-active {
+            border-bottom-color: $color-accent;
+        }
+
+        a {
+            display: block;
+            padding: 25px;
+            text-decoration: none;
+            color: $color-text;
+
+            span {
+                color: $color-accent;
+                margin-left: 5px;
+            }
+        }
+    }
 }
