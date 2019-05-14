@@ -12,13 +12,16 @@ angular.module('panel.payment.befrooshim.components', ['panel.payment.befrooshim
                         var data = response.data;
                         if (data.type) {
                             $ctrl.user = data.user;
-                            $rootScope.toastMessage('ذخیره شد.')
+                            $rootScope.toastMessage('ذخیره شد.');
+                            console.log("saved");
                         } else {
                             $rootScope.processAppError(data.message);
+                            console.log(data.message);
                         }
                     })
                     .catch(function(err) {
                         $rootScope.processAppError(err.message);
+                        console.log(err.message);
                     })
             }
 
@@ -289,7 +292,8 @@ angular.module('panel.payment.befrooshim.components', ['panel.payment.befrooshim
             var $ctrl = this;
 
             $ctrl.close = function() {
-                $ctrl.visible = false;
+                $ctrl.visible = true;
+                $ctrl.message = 'saved';
             }
 
         },

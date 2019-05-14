@@ -1,30 +1,46 @@
-<form action="" class="[ m-form ]">
+<form name="signupForm" class="[ m-form ]">
     <h3 class="[ m-form__title ]">ایجاد حساب کاربری</h3>
 
     <div class="form-item">
         <label>نام کاربری</label>
-        <input class="" type="text" ng-model="$ctrl.user.username">
+        <input type="text" name="username" ng-model="$ctrl.user.username" minlength="4" required>
+        <!-- <p ng-show="signupForm.username.$touched && signupForm.username.$invalid"></p> -->
+        <div ng-messages="signupForm.username.$error" ng-show="signupForm.username.$dirty">
+            <div ng-message="minlength" class="[ m-info__text is-error is-smaller ]">نام کاربری کوتاه است.</div>
+            <div ng-message="required" class="[ m-info__text is-error is-smaller ]">انتخاب نام کاربری الزامی است.</div>
+        </div>
     </div>
 
     <div class="form-item">
         <label>ایمیل</label>
-        <input class="" type="text" ng-model="$ctrl.user.email">
+        <input class="" type="email" name="email" ng-model="$ctrl.user.email" required>
+        <div ng-messages="signupForm.email.$error" ng-show="signupForm.email.$dirty">
+            <div ng-message="email" class="[ m-info__text is-error is-smaller ]">لطفا از ایمیل معتبر استفاده کنید.</div>
+            <div ng-message="required" class="[ m-info__text is-error is-smaller ]">وارد کردن ایمیل الزامی است.</div>
+        </div>
     </div>
 
     <div class="form-item">
         <label>شماره تلفن همراه</label>
-        <input class="" type="text" ng-model="$ctrl.user.mobileNumber">
+        <input class="" type="text" name="mobileNumber" ng-model="$ctrl.user.mobileNumber" minlength="11" maxlength="11" required>
+        <div ng-messages="signupForm.mobileNumber.$error" ng-show="signupForm.mobileNumber.$dirty">
+            <div ng-message="required" class="[ m-info__text is-error is-smaller ]">وارد کردن شماره تلفن همراه الزامی است.</div>
+        </div>
     </div>
 
     <div class="form-item">
         <label>رمز عبور</label>
-        <input class="" type="text" ng-model="$ctrl.user.password">
+        <input class="" type="password" name="password" ng-model="$ctrl.user.password" minlength="8" maxlength="12" required>
+        <div ng-messages="signupForm.password.$error" ng-show="signupForm.password.$dirty">
+            <div ng-message="minlength" class="[ m-info__text is-error is-smaller ]">رمز عبور کوتاه است.</div>
+            <div ng-message="required" class="[ m-info__text is-error is-smaller ]">لطفا یک رمز عبور انتخاب کنید.</div>
+        </div>
     </div>
 
     <div class="[ m-form__bottom-bar ]">
-        <div class="row between-xs">
+        <div class="row between-xs middle-xs">
             <div class="col-xs-5">
-                <button class="button is-100" ng-click="$ctrl.save()">ثبت نام</button>
+                <button class="button is-100" type="submit" ng-click="$ctrl.save()" ng-disabled=!signupForm.$valid>ثبت نام</button>
                 {{$ctrl.token}}
             </div>
             <div class="col-xs-6 [ is-align-left ]">
