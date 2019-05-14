@@ -5,14 +5,15 @@ angular.module('panel.payment.befrooshim.controller', ['panel.payment.befrooshim
             alert(message)
         }
 
-        $rootScope.toastMessage = function (message) {
+        $rootScope.toastMessage = function (message, state) {
             $rootScope.showToast = true;
             $rootScope.toastMessageText = message;
-            setTimeout(function () {
-                $rootScope.showToast = false;
-                $rootScope.toastMessageText = '';
-                $rootScope.$apply();
-            }, 1500)
+            $rootScope.toastState = state;
+            // setTimeout(function () {
+            //     $rootScope.showToast = false;
+            //     $rootScope.toastMessageText = '';
+            //     $rootScope.$apply();
+            // }, 5000);
         }
 
         $rootScope.setLoadingState = function ($scope) {

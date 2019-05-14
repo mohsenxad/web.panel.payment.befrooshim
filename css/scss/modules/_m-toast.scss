@@ -1,0 +1,59 @@
+toast {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+    min-width: 300px;
+}
+
+.m-toast {
+    &__box {
+        padding: 25px;
+        background-color: #fff;
+        border-radius: 5px;
+        border: 1px solid transparent;
+        position: relative;
+
+        &.is-success {
+            background-color: $color-success;
+        }
+
+        &.is-error {
+            background-color: $color-error;
+        }
+
+        &.is-warning {
+            background-color: $color-warning;
+        }
+
+        &.is-focus {
+            background-color: $color-focus;
+        }
+    }
+
+    &__icon {
+        display: inline-block;
+        padding-left: 10px;
+        font-size: 16px;
+        position: relative;
+        top: 2px;
+        color: #fff;
+    }
+
+    &__msg {
+        display: inline-block;
+        color: #fff;
+        margin: 0;
+    }
+
+    &__close {
+        position: absolute;
+        font-size: 10px;
+        background-color: #fff;
+        padding: 5px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        top: -10px;
+        right: -10px;
+    }
+}
