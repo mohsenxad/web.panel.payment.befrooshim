@@ -12,13 +12,16 @@ angular.module('panel.payment.befrooshim.components', ['panel.payment.befrooshim
                         var data = response.data;
                         if (data.type) {
                             $ctrl.user = data.user;
-                            $rootScope.toastMessage('ذخیره شد.')
+                            $rootScope.toastMessage('ثبت نام با موفقیت انجام شد.', 'success');
+                            console.log("saved");
                         } else {
                             $rootScope.processAppError(data.message);
+                            console.log(data.message);
                         }
                     })
                     .catch(function(err) {
                         $rootScope.processAppError(err.message);
+                        console.log(err.message);
                     })
             }
 
@@ -283,7 +286,8 @@ angular.module('panel.payment.befrooshim.components', ['panel.payment.befrooshim
     .component('toast', {
         bindings: {
             visible: '<',
-            message: '@'
+            message: '@',
+            state: '@'
         },
         controller: function($scope) {
             var $ctrl = this;

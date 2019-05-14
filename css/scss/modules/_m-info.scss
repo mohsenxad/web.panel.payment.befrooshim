@@ -1,11 +1,30 @@
 .m-info {
     &__text {
-        font-size: $font-size-large;
+        font-size: $font-size-default;
         margin: 10px 0;
         display: block;
 
         &.is-success {
             color: $color-success;
+        }
+        &.is-error {
+            color: $color-error;
+        }
+        &.is-warning {
+            color: $color-warning;
+        }
+        &.is-focus {
+            color: $color-focus;
+        }
+
+        &.is-smaller {
+            font-size: $font-size-smaller;
+        }
+        &.is-small {
+            font-size: $font-size-small;
+        }
+        &.is-large {
+            font-size: $font-size-large;
         }
     }
 

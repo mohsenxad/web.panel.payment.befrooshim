@@ -15,6 +15,7 @@ File: Main SCSS File
 07. Vendors
 08. Overwrite
 ================= */
+/* Shadow */
 .p-auth {
   min-height: 100vh;
   display: flex;
@@ -556,11 +557,8 @@ a.is-muted {
 
 .is-muted a:hover,
 a.is-muted:hover {
-  -webkit-transition: all 5s ease-out;
-  -moz-transition: all 5s ease-out;
-  -ms-transition: all 5s ease-out;
-  -o-transition: all 5s ease-out;
-  transition: all 5s ease-out;
+  -moz-transition: all linear 0.2s;
+  transition: all linear 0.2s;
   color: #2f3247;
 }
 
@@ -940,11 +938,8 @@ a.label:hover {
   margin-right: -12px;
 }
 .button:hover {
-  -webkit-transition: all 5s ease-out;
-  -moz-transition: all 5s ease-out;
-  -ms-transition: all 5s ease-out;
-  -o-transition: all 5s ease-out;
-  transition: all 5s ease-out;
+  -moz-transition: all linear 0.2s;
+  transition: all linear 0.2s;
   outline: none;
   text-decoration: none;
   color: #fff;
@@ -1176,11 +1171,8 @@ select:hover {
 input:focus,
 textarea:focus,
 select:focus {
-  -webkit-transition: all 5s ease-out;
-  -moz-transition: all 5s ease-out;
-  -ms-transition: all 5s ease-out;
-  -o-transition: all 5s ease-out;
-  transition: all 5s ease-out;
+  -moz-transition: all linear 0.2s;
+  transition: all linear 0.2s;
   outline: none;
   color: inherit;
   background-color: #fff;
@@ -1485,11 +1477,8 @@ fieldset > .form-item:last-child {
   text-decoration: none;
 }
 .breadcrumb a:hover {
-  -webkit-transition: all 5s ease-out;
-  -moz-transition: all 5s ease-out;
-  -ms-transition: all 5s ease-out;
-  -o-transition: all 5s ease-out;
-  transition: all 5s ease-out;
+  -moz-transition: all linear 0.2s;
+  transition: all linear 0.2s;
   color: #c72394;
   text-decoration: underline;
 }
@@ -1558,11 +1547,8 @@ fieldset > .form-item:last-child {
   margin-left: 0;
 }
 .pager a:hover {
-  -webkit-transition: all 5s ease-out;
-  -moz-transition: all 5s ease-out;
-  -ms-transition: all 5s ease-out;
-  -o-transition: all 5s ease-out;
-  transition: all 5s ease-out;
+  -moz-transition: all linear 0.2s;
+  transition: all linear 0.2s;
   background-color: rgba(47, 50, 71, 0.04);
 }
 .pager a.is-disabled {
@@ -1646,11 +1632,8 @@ fieldset > .form-item:last-child {
   color: inherit;
 }
 .alert a:hover {
-  -webkit-transition: all 5s ease-out;
-  -moz-transition: all 5s ease-out;
-  -ms-transition: all 5s ease-out;
-  -o-transition: all 5s ease-out;
-  transition: all 5s ease-out;
+  -moz-transition: all linear 0.2s;
+  transition: all linear 0.2s;
   color: #ee2455;
 }
 .alert .close {
@@ -2082,11 +2065,8 @@ fieldset > .form-item:last-child {
   color: inherit;
 }
 .message a:hover {
-  -webkit-transition: all 5s ease-out;
-  -moz-transition: all 5s ease-out;
-  -ms-transition: all 5s ease-out;
-  -o-transition: all 5s ease-out;
-  transition: all 5s ease-out;
+  -moz-transition: all linear 0.2s;
+  transition: all linear 0.2s;
   color: rgba(17, 17, 19, 0.6);
 }
 .message.is-center, .message.is-centered {
@@ -2160,11 +2140,8 @@ fieldset > .form-item:last-child {
   text-decoration: none;
 }
 .tabs a:hover {
-  -webkit-transition: all 5s ease-out;
-  -moz-transition: all 5s ease-out;
-  -ms-transition: all 5s ease-out;
-  -o-transition: all 5s ease-out;
-  transition: all 5s ease-out;
+  -moz-transition: all linear 0.2s;
+  transition: all linear 0.2s;
   color: #158df7;
   background: none;
   text-decoration: none;
@@ -2365,11 +2342,8 @@ fieldset > .form-item:last-child {
   color: #fff;
 }
 .is-offcanvas a:hover {
-  -webkit-transition: all 5s ease-out;
-  -moz-transition: all 5s ease-out;
-  -ms-transition: all 5s ease-out;
-  -o-transition: all 5s ease-out;
-  transition: all 5s ease-out;
+  -moz-transition: all linear 0.2s;
+  transition: all linear 0.2s;
   color: rgba(255, 255, 255, 0.6);
 }
 
@@ -2672,11 +2646,8 @@ figure .is-video-container {
   line-height: 22px;
 }
 .close:hover {
-  -webkit-transition: all 5s ease-out;
-  -moz-transition: all 5s ease-out;
-  -ms-transition: all 5s ease-out;
-  -o-transition: all 5s ease-out;
-  transition: all 5s ease-out;
+  -moz-transition: all linear 0.2s;
+  transition: all linear 0.2s;
   opacity: 1;
   color: #fff;
   background-color: #2f3247;
@@ -7173,6 +7144,12 @@ p {
 .m-form__bottom-bar {
   margin-top: 60px !important;
 }
+.m-form input.ng-touched.ng-invalid {
+  border: 1px solid #ea554c;
+}
+.m-form input.ng-valid {
+  border: 1px solid #2ecc71;
+}
 
 .m-select {
   user-select: none;
@@ -7362,12 +7339,30 @@ p {
 }
 
 .m-info__text {
-  font-size: 1.3125em;
+  font-size: 1em;
   margin: 10px 0;
   display: block;
 }
 .m-info__text.is-success {
   color: #2ecc71;
+}
+.m-info__text.is-error {
+  color: #ea554c;
+}
+.m-info__text.is-warning {
+  color: #d2913c;
+}
+.m-info__text.is-focus {
+  color: #2fb3f3;
+}
+.m-info__text.is-smaller {
+  font-size: 0.75em;
+}
+.m-info__text.is-small {
+  font-size: 0.875em;
+}
+.m-info__text.is-large {
+  font-size: 1.3125em;
 }
 .m-info__badge {
   display: inline-block !important;
@@ -7389,6 +7384,57 @@ p {
 }
 .m-info__box.is-focus {
   border-right-color: #2fb3f3;
+}
+
+toast {
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+  min-width: 300px;
+}
+
+.m-toast__box {
+  padding: 25px;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  position: relative;
+}
+.m-toast__box.is-success {
+  background-color: #2ecc71;
+}
+.m-toast__box.is-error {
+  background-color: #ea554c;
+}
+.m-toast__box.is-warning {
+  background-color: #d2913c;
+}
+.m-toast__box.is-focus {
+  background-color: #2fb3f3;
+}
+.m-toast__icon {
+  display: inline-block;
+  padding-left: 10px;
+  font-size: 16px;
+  position: relative;
+  top: 2px;
+  color: #fff;
+}
+.m-toast__msg {
+  display: inline-block;
+  color: #fff;
+  margin: 0;
+}
+.m-toast__close {
+  position: absolute;
+  font-size: 10px;
+  background-color: #fff;
+  padding: 5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  top: -10px;
+  right: -10px;
 }
 
 /* ===== 05. Partials ===== */

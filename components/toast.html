@@ -1,12 +1,12 @@
-<div class="container-toast-message" ng-if='$ctrl.visible==true'>
-    <div class="toast-message white">
-        <div class="row no-gutters">
+<div class="[ m-toast ]" ng-if='$ctrl.visible==true'>
+    <div class="[ m-toast__box is-success ]" ng-class="{{$ctrl.state}}">
+        <div class="row">
             <div class="col-12">
-                <div class="icon icon-notification"></div>
-                <div class="toast-message-text">
+                <span class="[ m-toast__icon ] far fa-bell"></span>
+                <p class="[ m-toast__msg ]">
                     {{$ctrl.message}}
-                </div>
-                <div class="icon icon-close" ng-click='$ctrl.close()'></div>
+                </p>
+                <span class="[ m-toast__close ] fas fa-times" ng-click="$ctrl.close()"></span>
             </div>
         </div>
     </div>

@@ -22,4 +22,15 @@
     &__bottom-bar {
         margin-top: 60px !important;
     }
+
+    // Validations
+    // ng-pristine ng-empty ng-invalid ng-invalid-required ng-touched ng-valid
+    input {
+        &.ng-touched.ng-invalid {
+            border: 1px solid $color-error;
+        }
+        &.ng-valid {
+            border: 1px solid $color-success;
+        }
+    }
 }

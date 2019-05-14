@@ -5,6 +5,7 @@
                 <img class="m-b-40" src="images/logo.jpg" alt="">
                 <login ng-if="login"></login>
                 <signup ng-if="!login"></signup>
+                <toast visible="showToast" message="{{toastMessageText}}"></toast>
             </div>
         </div>
     </div>
