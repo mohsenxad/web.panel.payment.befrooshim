@@ -13,4 +13,8 @@ p {
 .container {
     max-width: 1200px;
     margin: 0 auto;
+    @include breakpoint(xs) {
+        width: 100%;
+        margin: 15px;
+    }
 }

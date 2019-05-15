@@ -38,12 +38,14 @@ File: Main SCSS File
 @import "base/general";
 
 /* ===== 03. Components ===== */
+@import "components/c-auth";
 @import "components/c-header";
 @import "components/c-ug-item";
 @import "components/c-menu";
 @import "components/c-footer";
 
 /* ===== 04. Modules ===== */
+@import "modules/m-button";
 @import "modules/m-form";
 @import "modules/m-select";
 @import "modules/m-wizard";
@@ -51,7 +53,6 @@ File: Main SCSS File
 @import "modules/m-toast";
 
 /* ===== 05. Partials ===== */
-@import "partials/auth";
 
 /* ===== 06. Helpers (Utils) ===== */
 @import "utils/helpers";

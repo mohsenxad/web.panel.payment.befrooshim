@@ -1,34 +1,35 @@
 angular.module('panel.payment.befrooshim.controller', ['panel.payment.befrooshim.services'])
-    .run(function ($rootScope) {
-        $rootScope.processAppError = function (message) {
+    .run(function($rootScope) {
+        $rootScope.processAppError = function(message) {
             console.log(message);
-            alert(message)
+            // alert(message)
         }
 
         $rootScope.toastMessage = function (message, state) {
             $rootScope.showToast = true;
             $rootScope.toastMessageText = message;
             $rootScope.toastState = state;
-            setTimeout(function () {
-                $rootScope.showToast = false;
-                $rootScope.toastMessageText = '';
-                $rootScope.$apply();
-            }, 5000);
+            // setTimeout(function() {
+            //     $rootScope.showToast = false;
+            //     $rootScope.toastMessageText = '';
+            //     $rootScope.toastState = '';
+            //     $rootScope.$apply();
+            // }, 5000);
         }
 
-        $rootScope.setLoadingState = function ($scope) {
-            $scope.$on('$routeChangeStart', function () {
+        $rootScope.setLoadingState = function($scope) {
+            $scope.$on('$routeChangeStart', function() {
                 $scope.isViewLoading = true;
             });
-            $scope.$on('$routeChangeSuccess', function () {
+            $scope.$on('$routeChangeSuccess', function() {
                 $scope.isViewLoading = false;
             });
-            $scope.$on('$routeChangeError', function () {
+            $scope.$on('$routeChangeError', function() {
                 $scope.isViewLoading = false;
             });
         }
     })
-    .controller('gatewayListCtrl', function ($rootScope, $scope, $routeParams) {
+    .controller('gatewayListCtrl', function($rootScope, $scope, $routeParams) {
         $rootScope.setLoadingState($scope);
 
         function init() {
@@ -45,7 +46,7 @@ angular.module('panel.payment.befrooshim.controller', ['panel.payment.befrooshim
 
         init();
     })
-    .controller('paymentListCtrl', function ($rootScope, $scope, $routeParams) {
+    .controller('paymentListCtrl', function($rootScope, $scope, $routeParams) {
         $rootScope.setLoadingState($scope);
 
         function init() {
@@ -62,7 +63,7 @@ angular.module('panel.payment.befrooshim.controller', ['panel.payment.befrooshim
 
         init();
     })
-    .controller('userGatewayListCtrl', function ($rootScope, $scope, $routeParams) {
+    .controller('userGatewayListCtrl', function($rootScope, $scope, $routeParams) {
         $rootScope.setLoadingState($scope);
 
         function init() {
@@ -76,14 +77,14 @@ angular.module('panel.payment.befrooshim.controller', ['panel.payment.befrooshim
 
         init();
     })
-    .controller('receiptCtrl', function ($rootScope, $scope, $routeParams, paymentServices, $window) {
+    .controller('receiptCtrl', function($rootScope, $scope, $routeParams, paymentServices, $window) {
         $rootScope.setLoadingState($scope);
-        $scope.downloadReceipt = function () {
+        $scope.downloadReceipt = function() {
             var node = document.getElementById('divReceipt');
             $scope.saveOrderButtonText = 'در حال اجرا ...';
             $scope.isCreatingReceipt = true;
             domtoimage.toPng(node)
-                .then(function (dataUrl) {
+                .then(function(dataUrl) {
                     var img = new Image();
                     var link = document.createElement('a');
                     link.download = $scope.orderId + '.jpeg';
@@ -93,7 +94,7 @@ angular.module('panel.payment.befrooshim.controller', ['panel.payment.befrooshim
                     $scope.isCreatingReceipt = false;
                     $scope.$apply();
                 })
-                .catch(function (err) {
+                .catch(function(err) {
                     $rootScope.processAppError(new Error('خطایی رخ داد.'))
                     console.error('oops, something went wrong!', error);
                     $scope.saveOrderButtonText = 'دخیره فاکتور خرید';
@@ -103,7 +104,7 @@ angular.module('panel.payment.befrooshim.controller', ['panel.payment.befrooshim
 
         function getPayment() {
             paymentServices.get($scope.paymentId)
-                .then(function (response) {
+                .then(function(response) {
                     var data = response.data;
                     if (data.type) {
                         $scope.payment = data.payment;
@@ -111,7 +112,7 @@ angular.module('panel.payment.befrooshim.controller', ['panel.payment.befrooshim
                         $rootScope.processAppError(data.message);
                     }
                 })
-                .catch(function (err) {
+                .catch(function(err) {
                     $rootScope.processAppError(err.message);
                 })
         }
@@ -130,14 +131,8 @@ angular.module('panel.payment.befrooshim.controller', ['panel.payment.befrooshim
 
         init();
     })
-    .controller('homeCtrl', function ($scope) {
-
-    })
-    .controller('payCtrl', function ($scope) {
-
-    })
-    .controller('authCtrl', function ($rootScope, $location) {
-        // $scope.path = $location.path();
-        $rootScope.login = false;
-    })
-    .controller('addUserGatewayCtrl', function () {});
+    .controller('homeCtrl', function() {})
+    .controller('payCtrl', function() {})
+    .controller('loginCtrl', function() {})
+    .controller('signupCtrl', function() {})
+    .controller('addUserGatewayCtrl', function() {});

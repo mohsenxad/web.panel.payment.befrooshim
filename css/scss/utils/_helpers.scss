@@ -21,9 +21,15 @@
 .is-align {
     &-right {
         text-align: right !important;
+        &.is-align-center-xs {
+            text-align: center !important;
+        }
     }
     &-left {
         text-align: left !important;
+        &.is-align-center-xs {
+            text-align: center !important;
+        }
     }
     &-center {
         text-align: center !important;

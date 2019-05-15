@@ -12,15 +12,17 @@ angular.module('panel.payment.befrooshim.components', ['panel.payment.befrooshim
                         var data = response.data;
                         if (data.type) {
                             $ctrl.user = data.user;
-                            $rootScope.toastMessage('ثبت نام با موفقیت انجام شد.', 'success');
+                            $rootScope.toastMessage('ثبت نام با موفقیت انجام شد.', 'is-success');
                             console.log("saved");
                         } else {
                             $rootScope.processAppError(data.message);
+                            $rootScope.toastMessage(data.message, 'is-error');
                             console.log(data.message);
                         }
                     })
                     .catch(function(err) {
                         $rootScope.processAppError(err.message);
+                        $rootScope.toastMessage(err.message, 'is-error');
                         console.log(err.message);
                     })
             }
@@ -48,7 +50,6 @@ angular.module('panel.payment.befrooshim.components', ['panel.payment.befrooshim
             }
 
             function login() {
-                alert();
                 userServices.login($ctrl.user.email, $ctrl.user.password)
                     .then(function(response) {
                         var data = response.data;
@@ -68,8 +69,7 @@ angular.module('panel.payment.befrooshim.components', ['panel.payment.befrooshim
                 $rootScope.login = false;
             }
 
-            $ctrl.$onInit = function() {
-            };
+            $ctrl.$onInit = function() {};
         },
         templateUrl: './components/login.html'
     })
@@ -310,14 +310,21 @@ angular.module('panel.payment.befrooshim.components', ['panel.payment.befrooshim
     })
     .component('ugItem', {
         bindings: {},
-        controller: function () {
+        controller: function() {
             var $ctrl = this;
         },
         templateUrl: './components/userGatewayItem.html'
     })
+    .component('logo', {
+        bindings: {},
+        controller: function() {
+            var $ctrl = this;
+        },
+        templateUrl: './components/logo.html'
+    })
     .component('footer', {
         bindings: {},
-        controller: function () {
+        controller: function() {
             var $ctrl = this;
         },
         templateUrl: './components/footer.html'

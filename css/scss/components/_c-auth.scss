@@ -1,0 +1,15 @@
+.c-auth {
+    @extend %hero;
+
+    &__box {
+        background-color: #fff;
+        border-radius: 5px;
+        padding: 36px 68px;
+        text-align: right;
+        @include shadow();
+
+        @include breakpoint(xs) {
+            padding: 36px 30px;
+        }
+    }
+}
