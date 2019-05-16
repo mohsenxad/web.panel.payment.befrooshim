@@ -1,59 +1,84 @@
 toast {
     position: absolute;
-    left: 30px;
-    bottom: 30px;
-    min-width: 300px;
+    top: 40px;
+    right: 30px;
+    min-width: 350px;
+    border-radius: 5px;
+
+    @include breakpoint(xs) {
+        top: 15px;
+        right: 15px;
+        left: 15px;
+    }
 }
 
 .m-toast {
+    $parent: &;
+
     &__box {
         padding: 25px;
         background-color: #fff;
         border-radius: 5px;
-        border: 1px solid transparent;
+        border-right: 5px solid transparent;
         position: relative;
+        @include shadow();
+
 
         &.is-success {
-            background-color: $color-success;
+            border-right-color: $color-success;
+
+            #{$parent}__icon {
+                color: $color-success;
+            }
         }
 
         &.is-error {
-            background-color: $color-error;
+            border-right-color: $color-error;
+
+            #{$parent}__icon {
+                color: $color-error;
+            }
         }
 
         &.is-warning {
-            background-color: $color-warning;
+            border-right-color: $color-warning;
+
+            #{$parent}__icon {
+                color: $color-warning;
+            }
         }
 
         &.is-focus {
-            background-color: $color-focus;
+            border-right-color: $color-focus;
+
+            #{$parent}__icon {
+                color: $color-focus;
+            }
         }
     }
 
     &__icon {
         display: inline-block;
         padding-left: 10px;
-        font-size: 16px;
+        font-size: 20px;
         position: relative;
-        top: 2px;
+        top: 3px;
         color: #fff;
     }
 
     &__msg {
         display: inline-block;
-        color: #fff;
         margin: 0;
     }
 
     &__close {
         position: absolute;
-        font-size: 10px;
-        background-color: #fff;
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.25);
         padding: 5px;
-        width: 20px;
-        height: 20px;
-        border-radius: 50%;
-        top: -10px;
-        right: -10px;
+        top: 28px;
+        left: 25px;
+        right: auto;
+        cursor: pointer;
     }
 }

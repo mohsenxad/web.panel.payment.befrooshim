@@ -10,13 +10,17 @@ angular.module('App', [
             .when('/', {
                 templateUrl: 'partials/home.html',
                 controller: 'homeCtrl',
-                redirectTo: '/auth'
+                redirectTo: '/login'
             })
             // .when('/init/:operatorId?',{templateUrl:'partials/init.html',controller:'initCtrl'})
             // .when('/updateServices',{templateUrl:'partials/init.html',controller:'updateCtrl'})
-            .when('/auth', {
-                templateUrl: 'partials/auth.html',
-                controller: 'authCtrl',
+            .when('/login', {
+                templateUrl: 'partials/login.html',
+                controller: 'loginCtrl',
+            })
+            .when('/signup', {
+                templateUrl: 'partials/signup.html',
+                controller: 'signupCtrl',
             })
             .when('/userGateway/add', {
                 templateUrl: 'partials/addUserGateway.html',
