@@ -7169,6 +7169,7 @@ p {
   color: #c72394;
   font-size: 0.875em;
   cursor: pointer;
+  text-decoration: none;
 }
 .m-form__bottom-bar {
   margin-top: 60px !important;
@@ -7440,6 +7441,7 @@ toast {
 
 .m-toast__box {
   padding: 25px;
+  padding-left: 60px;
   background-color: #fff;
   border-radius: 5px;
   border-right: 5px solid transparent;

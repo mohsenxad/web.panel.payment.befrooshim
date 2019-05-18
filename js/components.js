@@ -22,7 +22,7 @@ angular.module('panel.payment.befrooshim.components', ['panel.payment.befrooshim
                     })
                     .catch(function(err) {
                         $rootScope.processAppError(err.message);
-                        $rootScope.toastMessage(err.message, 'is-error');
+                        $rootScope.toastMessage('ارتباط با سرور برقرار نشد، لطفا دوباره تلاش کنید', 'is-error');
                         console.log(err.message);
                     })
             }

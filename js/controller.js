@@ -9,12 +9,12 @@ angular.module('panel.payment.befrooshim.controller', ['panel.payment.befrooshim
             $rootScope.showToast = true;
             $rootScope.toastMessageText = message;
             $rootScope.toastState = state;
-            // setTimeout(function() {
-            //     $rootScope.showToast = false;
-            //     $rootScope.toastMessageText = '';
-            //     $rootScope.toastState = '';
-            //     $rootScope.$apply();
-            // }, 5000);
+            setTimeout(function() {
+                $rootScope.showToast = false;
+                $rootScope.toastMessageText = '';
+                $rootScope.toastState = '';
+                $rootScope.$apply();
+            }, 5000);
         }
 
         $rootScope.setLoadingState = function($scope) {
