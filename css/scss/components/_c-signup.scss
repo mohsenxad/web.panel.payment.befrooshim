@@ -1,4 +1,4 @@
-.c-auth {
+.c-signup {
     @extend %hero;
 
     &__box {
@@ -11,5 +11,10 @@
         @include breakpoint(xs) {
             padding: 36px 30px;
         }
+    }
+
+    logo {
+        display: block;
+        margin-bottom: 40px;
     }
 }

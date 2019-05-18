@@ -17,7 +17,7 @@ File: Main SCSS File
 ================= */
 /* Breakpoist */
 /* Shadow */
-.c-auth {
+.c-signup {
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -7051,7 +7051,7 @@ p {
 }
 
 /* ===== 03. Components ===== */
-.c-auth__box {
+.c-signup__box {
   background-color: #fff;
   border-radius: 5px;
   padding: 36px 68px;
@@ -7059,9 +7059,13 @@ p {
   box-shadow: 0 3px 8px 0 rgba(231, 233, 245, 0.7);
 }
 @media (max-width: 768px) {
-  .c-auth__box {
+  .c-signup__box {
     padding: 36px 30px;
   }
+}
+.c-signup logo {
+  display: block;
+  margin-bottom: 40px;
 }
 
 .c-header {
