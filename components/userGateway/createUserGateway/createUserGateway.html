@@ -13,7 +13,15 @@
                             </div>
                             <div class="form-item">
                                 <label>انتخاب بانک</label>
-                                <div class="[ m-select ]">
+                                <select
+                                    id='cmdGateway'
+                                    ng-model="$ctrl.userGateway.gateway"
+                                    ng-options='gateway as gateway.persianTitle for gateway in $ctrl.gatewayList track by gateway._id'
+                                    ng-change = '$ctrl.createCredentialsFiledList()'
+                                    >
+                                </select>
+                                <!-- <div class="[ m-select ]">
+
                                     <input type="checkbox">
                                     <div class="[ m-select__button ]">
                                         <div class="[ m-select__button__selected-value ]">
@@ -23,7 +31,7 @@
                                             <i class="fas fa-chevron-up"></i>
                                             <i class="fas fa-chevron-down"></i>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <!-- <div class="[ m-select__options ]">
                                         <div class="[ m-select__options ]">
                                             <input class="s-c top" type="radio" name="platform" value="codepen">
@@ -32,8 +40,8 @@
                                             <span class="label">CodePen</span>
                                             <span class="opt-val">CodePen</span>
                                         </div>
-                                    </div> -->
-                                </div>
+                                    </div>
+                                </div> -->
                             </div>
                         </div>
                         <div class="row [ m-wizard__control ]">
@@ -61,17 +69,9 @@
                     <div class="col-xs-7 [ m-wizard__form ]">
                         <h5 class="m-b-40">ثبت اطلاعات امنیتی</h5>
                         <div class="[ m-form ]">
-                            <div class="form-item">
-                                <label>پارامتر 1</label>
-                                <input type="text" ng-model="">
-                            </div>
-                            <div class="form-item">
-                                <label>پارامتر 2</label>
-                                <input type="text" ng-model="">
-                            </div>
-                            <div class="form-item">
-                                <label>پارامتر 3</label>
-                                <input type="text" ng-model="">
+                            <div class="form-item" ng-repeat='field in $ctrl.credentialsFiledList'>
+                                <label>{{field}}</label>
+                                <input type='text' ng-model='$ctrl.userGateway.credentials[field]'/>
                             </div>
                         </div>
                         <div class="row [ m-wizard__control ]">

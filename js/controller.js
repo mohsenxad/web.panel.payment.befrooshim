@@ -1,4 +1,4 @@
-angular.module('panel.payment.befrooshim.controller', ['panel.payment.befrooshim.services'])
+angular.module('panel.payment.befrooshim.controller', ['payment.panel.payment.befrooshim.services'])
     .run(function($rootScope) {
         $rootScope.processAppError = function(message) {
             console.log(message);
@@ -135,4 +135,16 @@ angular.module('panel.payment.befrooshim.controller', ['panel.payment.befrooshim
     .controller('payCtrl', function() {})
     .controller('loginCtrl', function() {})
     .controller('signupCtrl', function() {})
-    .controller('addUserGatewayCtrl', function() {});
+    .controller('addUserGatewayCtrl', function($routeParams, $scope) {
+
+      function init() {
+          var token = $routeParams.token;
+          if (token) {
+              $scope.token = token;
+          } else {
+              $rootScope.processAppError('لطفا از صفحه ی لاگین اقدام کنید.')
+          }
+      }
+
+      init();
+    });
