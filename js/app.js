@@ -3,7 +3,22 @@ angular.module('App', [
         'mgo-angular-wizard',
         'ngMessages',
         'panel.payment.befrooshim.controller',
-        'panel.payment.befrooshim.components'
+        'menu.panel.payment.befrooshim.components',
+        'logo.panel.payment.befrooshim.components',
+        'signup.panel.payment.befrooshim.components',
+        'login.panel.payment.befrooshim.components',
+        'toast.panel.payment.befrooshim.components',
+        'loading.panel.payment.befrooshim.components',
+        'header.panel.payment.befrooshim.components',
+        'footer.panel.payment.befrooshim.components',
+        'createpayment.panel.payment.befrooshim.components',
+        'paymentlist.panel.payment.befrooshim.components',
+        'paymentlistitem.panel.payment.befrooshim.components',
+        'gatewaylist.panel.payment.befrooshim.components',
+        'gatewaylistitem.panel.payment.befrooshim.components',
+        'createusergateway.panel.payment.befrooshim.components',
+        'usergatewaylist.panel.payment.befrooshim.components',
+        'usergatewaylistitem.panel.payment.befrooshim.components',
     ])
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider
@@ -22,7 +37,7 @@ angular.module('App', [
                 templateUrl: 'partials/signup.html',
                 controller: 'signupCtrl',
             })
-            .when('/userGateway/add', {
+            .when('/userGateway/add/:token', {
                 templateUrl: 'partials/addUserGateway.html',
                 controller: 'addUserGatewayCtrl'
             })
