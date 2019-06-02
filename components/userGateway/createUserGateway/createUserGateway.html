@@ -1,3 +1,7 @@
+<link
+  rel="stylesheet"
+  href="components/userGateway/createUserGateway/createUserGateway.css"
+>
 <section class="[ c-ug-add ]">
     <div class="container">
         <h4 class="[ b-breadcrumb ]">افزودن درگاه</h4>
@@ -107,10 +111,27 @@
                             <p>
                                 برای تست درگاه لازم است یک پرداخت بصورت نمونه صورت پذیرد. پس از انجام پرداخت تست، هزینه کسر شده مجددا به حساب شما برگشت داده می شود
                             </p>
-                            <button class="button is-secondary [ is-focus ]">
+                            <button
+                              class="button is-secondary [ is-focus ]"
+                              ng-click='$ctrl.createTestPayment()'
+                            >
                                 انجام پرداخت تستی
                             </button>
                         </div>
+
+                        <div
+                          class="[ m-info__box is-focus ]"
+                          ng-if='$ctrl.testPaymentErrorMessage'
+                        >
+                            <p>
+                              {{$ctrl.testPaymentErrorMessage}}
+                            </p>
+                            <button class="button is-secondary [ is-focus ]" wz-previous>
+                                <span class="fas fa-arrow-right"></span>
+                                بررسی اطلاعات
+                            </button>
+                        </div>
+
                         <div class="row [ m-wizard__control ]">
                             <div class="col-xs-6 [ --right ]">
                                 <button class="button is-icon [ is-inverted ]" wz-previous>

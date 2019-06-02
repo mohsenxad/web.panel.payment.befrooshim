@@ -147,4 +147,37 @@ angular.module('panel.payment.befrooshim.controller', ['payment.panel.payment.be
       }
 
       init();
-    });
+    })
+    .controller('uikitCtrl',function($scope){
+      $scope.token='o563rxiCCdIq6HMDpx5s'
+      $scope.fakePayment={
+        _id:'123123123',
+        bank:'sep',
+        description:'یک پرداخت تستی',
+        userMobileNumber:'09122707748',
+        price:15000,
+        registerDate:'1397/11/1',
+        status:'done',
+      };
+      $scope.fakeGateway={
+        abbriviation: "sep",
+        credentialList: (2) ["MID", "ReportPanelPassword"],
+        englishTitle: "saman",
+        logoPath: "/gateway/sep.png",
+        persianTitle: "سامان",
+        website: "https://epayreport.sep.ir",
+        _id: "5cc03ea477affe11ebb05f32",
+      }
+
+      $scope.fakeUserGateway={
+        credentials: {loginAccount: "mPAn3ub3UkHC05cO2KK3"},
+        gateway: {_id: "5c712dcff9bff15133fd153b", englishTitle: "parsian", persianTitle: "پارسیان", abbriviation: "pec"},
+        isActive: true,
+        lastOrderId: 1141,
+        registerDate: "2019-02-23T14:52:24.937Z",
+        user: "5c7134628db7e8497a436f90",
+        website: "fecharge.com",
+        _id: "5c715e2814b1e357f775c982",
+      }
+
+    })

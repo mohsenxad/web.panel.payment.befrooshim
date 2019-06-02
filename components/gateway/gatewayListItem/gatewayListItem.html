@@ -1,8 +1,16 @@
+<link
+  rel="stylesheet"
+  href="components/gateway/gatewayListItem/gatewayListItem.css"
+>
+
 <a ng-href='#!/service/order/{{$ctrl.gateway._id}}' title="" class="row no-gutters align-items-center service-list-item">
     <div class="col-12">
-        <div class="item-package-name">
-            {{$ctrl.gateway.persianTitle}}
-        </div>
+
+      <gatewaylogo
+          abbriviation='$ctrl.gateway.abbriviation'
+      >
+      </gatewaylogo>
+
     </div>
     <div class="col-9">
         <div class="item-detail text-right">

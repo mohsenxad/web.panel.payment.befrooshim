@@ -1,40 +1,45 @@
+<link
+  rel="stylesheet"
+  href="components/userGateway/userGatewayListItem/userGatewayListItem.css"
+>
 <a ng-href='#!/service/order/{{$ctrl.gateway._id}}' title="" class="row no-gutters align-items-center service-list-item">
-    <div class="col-12">
-        <div class="item-package-name">
-            {{$ctrl.usergateway.gateway.persianTitle}}
-        </div>
+  <div class='row'>
+    <div class="col-1">
     </div>
-    <div class="col-6">
-        <div class="item-detail text-right">
-          <div class="detail-text">
-              <span class="icon icon-pair-of-bills"></span>
-              <div>{{$ctrl.usergateway.gateway.englishTitle}}</div>
-          </div>
-            <div class="detail-text"><span class="icon icon-sim-card"></span>
-              {{$ctrl.usergateway.gateway.abbriviation}}
-            </div>
-            <div class="detail-text"><span class="icon icon-calendar-page-empty"></span>
-              {{$ctrl.usergateway.gateway.website}}
-            </div>
-        </div>
+    <div class="col-1">
+      <gatewaylogo
+          abbriviation='$ctrl.usergateway.gateway.abbriviation'
+      >
+      </gatewaylogo>
     </div>
     <div class="col-3">
-      <div class="item-detail text-right">
-        <div class="detail-text">
-            <span class="icon icon-pair-of-bills"></span>
-            <div>{{$ctrl.usergateway.website}}</div>
-        </div>
-          <div class="detail-text"><span class="icon icon-sim-card"></span>
-            {{$ctrl.usergateway.lastOrderId}}
-          </div>
-          <div class="detail-text"><span class="icon icon-calendar-page-empty"></span>
-            {{$ctrl.usergateway.credentials}}
-          </div>
-      </div>
+      <span>فروشگاه</span>
+      <label>
+        {{$ctrl.usergateway.website}}
+      </label>
     </div>
-    <div class="col-3 text-left">
-      <span class="item-price">
-        {{$ctrl.usergateway.gateway.credentialList|json}}
-      </span>
+    <div class="col-3">
+      <span>وضعیت</span>
+      <label>
+        {{$ctrl.usergateway.status}}
+      </label>
     </div>
+    <div class="col-3">
+      <ul>
+        <li>
+          <a
+            ng-href='$ctrl.usergateway.gateway.website'
+          >
+          مدیریت پرداخت
+          </a>
+        </li>
+        <li>
+          ویرایش
+        </li>
+        <li>
+          حذف
+        </li>
+      </ul>
+    </div>
+  </div>
 </a>

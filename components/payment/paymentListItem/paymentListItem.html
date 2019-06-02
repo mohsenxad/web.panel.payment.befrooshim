@@ -1,29 +1,76 @@
-<a ng-href='#!/service/order/{{$ctrl.gateway._id}}' title="" class="row no-gutters align-items-center service-list-item">
-    <div class="col-12">
-        <div class="item-package-name">
-          {{$ctrl.payment.description}}
+<link
+  rel="stylesheet"
+  href="components/payment/paymentListItem/paymentListItem.css"
+>
 
-        </div>
-    </div>
-    <div class="col-9">
-        <div class="item-detail text-right">
-          <div class="detail-text">
-              <span class="icon icon-pair-of-bills"></span>
-              <div>
-                  {{$ctrl.payment.price}}
-              </div>
-          </div>
-          <div class="detail-text"><span class="icon icon-sim-card"></span>
-            {{$ctrl.payment.userMobileNumber}}
-          </div>
-          <div class="detail-text"><span class="icon icon-calendar-page-empty"></span>
-            {{$ctrl.payment.status}}
-          </div>
-          <div class="detail-text">
-            بانک :
-            {{$ctrl.payment.bank}}
-          </div>
+<div class='row' ng-if='$ctrl.payment._id'>
+  <div class='col-3'>
+    <span>
+      {{$ctrl.payment._id}}
+    </span>
+  </div>
+  <div class='col-1'>
+    <gatewaylogo
+        abbriviation='$ctrl.payment.bank'
+    >
+    </gatewaylogo>
+  </div>
+  <div class='col-2'>
+    <span>
+      {{$ctrl.payment.description}}
+    </span>
+  </div>
+  <div class='col-1'>
+    <span>
+      {{$ctrl.payment.userMobileNumber}}
+    </span>
+  </div>
+  <div class='col-1'>
+    <span>
+      {{$ctrl.payment.price}}
+    </span>
+  </div>
+  <div class='col-1'>
+    <span>
+      {{$ctrl.payment.registerDate}}
+    </span>
+  </div>
+  <div class='col-1'>
+    <span>
+      {{$ctrl.payment.status}}
+    </span>
+  </div>
+  <div class="col-1">
+    <ul>
+      <li>بازپرداخت</li>
+      <li>تنظیمات</li>
+      <li>به اشتراک گذاری</li>
+      <li>
+        <a
+        ng-href='#!/service/order/{{$ctrl.gateway._id}}'
+        title=""
+        class="row no-gutters align-items-center service-list-item"
+        >
+        جزئیات
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
 
-        </div>
-    </div>
-</a>
+<div class="row lightui2" ng-if='!$ctrl.payment._id'>
+     <div class="lightui2b-shimmer">
+       <div class="_2iwr"></div>
+       <div class="_2iws"></div>
+       <div class="_2iwt"></div>
+       <div class="_2iwu"></div>
+       <div class="_2iwv"></div>
+       <div class="_2iww"></div>
+       <div class="_2iwx"></div>
+       <div class="_2iwy"></div>
+       <div class="_2iwz"></div>
+       <div class="_2iw-"></div>
+       <div class="_2iw_"></div>
+       <div class="_2ix0"></div>
+     </div>
+   </div>

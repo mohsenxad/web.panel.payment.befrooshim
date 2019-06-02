@@ -19,6 +19,8 @@ angular.module('App', [
         'createusergateway.panel.payment.befrooshim.components',
         'usergatewaylist.panel.payment.befrooshim.components',
         'usergatewaylistitem.panel.payment.befrooshim.components',
+        'gatewaylogo.panel.payment.befrooshim.components',
+        'paymentdetail.panel.payment.befrooshim.components',
     ])
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider
@@ -27,8 +29,6 @@ angular.module('App', [
                 controller: 'homeCtrl',
                 redirectTo: '/login'
             })
-            // .when('/init/:operatorId?',{templateUrl:'partials/init.html',controller:'initCtrl'})
-            // .when('/updateServices',{templateUrl:'partials/init.html',controller:'updateCtrl'})
             .when('/login', {
                 templateUrl: 'partials/login.html',
                 controller: 'loginCtrl',
@@ -67,7 +67,12 @@ angular.module('App', [
                 controller: 'receiptCtrl'
             })
 
+            .when('/uikit', {
+                templateUrl: 'partials/uikit.html',
+                controller: 'uikitCtrl'
+            })
+
             .otherwise("/404", {
-                templateUrl: 'partials/home.html'
+                templateUrl: 'partials/404.html'
             })
     }]);

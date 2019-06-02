@@ -29,5 +29,14 @@ angular.module('payment.panel.payment.befrooshim.services',['LocalStorageModule'
     });
   }
 
+  api.createTestPayment = function(token,gatewayId,lastOrderId,credentials){
+    return $http({
+      url:'https://api_panel_payment.befrooshim.com/payment/testPayment',
+      data:{token:token,gatewayId:gatewayId,lastOrderId:lastOrderId,credentials:credentials},
+      method:'POST',
+      headers:{'Content-Type':'application/json'}
+    });
+  }
+
   return api;
 })

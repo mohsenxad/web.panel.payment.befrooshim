@@ -1,11 +1,40 @@
+<link
+  rel="stylesheet"
+  href="components/payment/paymentList/paymentList.css"
+>
 <div class="container-service-list">
     <div class="container">
         <div class="row no-gutters">
+          <div ng-if='$ctrl.loading==true'>
+            Loading ...
+          </div>
+          <div ng-if='!$ctrl.loading==true'>
+            <span
+              ng-if='$ctrl.paymentList && $ctrl.paymentList.length<1'
+            >
+            هیج پرداختی ثبت نشده است.
+            </span>
             <div class="col-12">
                 <div class="service-list-wrapper">
-                  <paymentlistitem ng-repeat='payment in $ctrl.paymentList' payment='payment'></paymentlistitem>
+                  <ul>
+                    <li
+                      ng-click='$ctrl.setVisiblePaymentItems(+1)'
+                    >
+                    next
+                    </li>
+                    <li
+                      ng-click='$ctrl.setVisiblePaymentItems(-1)'
+                    >
+                    prev
+                    </li>
+                  </ul>
+                  <paymentlistitem
+                    ng-repeat='payment in $ctrl.visiblePaymentList'
+                    payment='payment'
+                  ></paymentlistitem>
                 </div>
             </div>
+          </div>
         </div>
     </div>
 </div>
